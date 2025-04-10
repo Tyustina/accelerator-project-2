@@ -2,3 +2,13 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+@import "global/mixin.scss";
+@import "global/global.scss";
+@import "global/variables.scss";
+@import "global/font.scss";
+
+@import "blocks/header.scss";
+@import "blocks/nav.scss";
+@import "blocks/button.scss";
+@import "blocks/main-slider.scss";
+
