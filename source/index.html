@@ -1,31 +1,96 @@
 <!DOCTYPE html>
 <html lang="ru" data-validate="html">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lifetour</title>
-    <link rel="stylesheet" href="sass/style.scss">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lifetour</title>
+  <link rel="preload" href="fonts/montserrat-extrabold.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/montserrat-light.woff2" as="font" type="font/woff2">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="public/favicon-32x32.png">
+  <link rel="stylesheet" href="sass/style.scss">
+</head>
 
-  <body class="page-body">
-    <!-- пример использования спрайта -->
-    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-    <svg>
-      <use href="/__spritemap#sprite-user"></use>
-    </svg>
-    <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="header">header</div>
-    <div data-test="hero">hero</div>
-    <div data-test="tours">tours</div>
-    <div data-test="training">training</div>
-    <div data-test="about">about</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="adv">adv</div>
-    <div data-test="gallery">gallery</div>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
-    <script type="module" src="js/main.js"></script>
-  </body>
+<body class="page-body">
+  <header class="header" data-test="header">
+    <div class="header__container">
+      <nav class="header__nav nav nav--closed">
+          <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="#tours">Туры</a></li>
+            <li class="nav__item"><a class="nav__link" href="#training">Обучение</a></li>
+            <li class="nav__item"><a class="nav__link" href="#about">О нас</a></li>
+            <li class="nav__item"><a class="nav__link" href="#reviews">Отзывы</a></li>
+            <li class="nav__item"><a class="nav__link" href="#gallery">Фотографии</a></li>
+            <li class="nav__item"><a class="nav__link" href="#contacts">Контакты</a></li>
+          </ul>
+        <button class="nav__button"><span class="nav__button-marker"></span></button>
+      </nav>
+      <svg class="header__logo">
+        <use href="/__spritemap#sprite-logo"></use>
+      </svg>
+      <a class="header__link" href="tel:78000000000">8 800 000-00-00</a>
+    </div>
+  </header>
+  <main class="main">
+    <h1 class="visually-hidden">Походы в горы с Lifetour</h1>
+    <section class="hero" data-test="hero">
+      <h2 class="visually-hidden">Лучшие туры</h2>
+      <div class="hero__swiper main-slider swiper">
+        <ul class="main-slider__list swiper-wrapper">
+          <li class="main-slider__item main-slider__item--kavkaz swiper-slide">
+            <div>
+              <h3>Захватывающие вершины Кавказа</h3>
+              <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход на вершину
+                горы Чегет.</p>
+              <a class="main-slider__link button" href="#">Смотреть тур</a>
+            </div>
+            <div>
+              <p>6 дней/5 ночей</p>
+              <p>Высокая сложность</p>
+            </div>
+          </li>
+          <li class="main-slider__item swiper-slide">
+            <div>
+              <h3>Невероятная природа Камчатки</h3>
+              <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых нетронутых
+                уголков дикой природы в мире.</p>
+              <a class="main-slider__link main-slider__item--kamchatka button" href="#">Смотреть тур</a>
+            </div>
+            <div>
+              <p>9 дней/10 ночей</p>
+              <p>Средняя сложность</p>
+            </div>
+          </li>
+          <li class="main-slider__item main-slider__item--altay swiper-slide">
+            <div>
+              <h3>Магические пейзажи Алтайского Края</h3>
+              <p>Алтайский трекинг-тур — это захватывающее приключение с посещением магических и захватывающих дух
+                ландшафтов Алтайских гор.</p>
+              <a class="main-slider__link button" href="#">Смотреть тур</a>
+            </div>
+            <div>
+              <p>8 дней/7 ночей</p>
+              <p>Лёгкая сложность</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section data-test="tours" id="tours">tours</section>
+    <section data-test="training" id="training">training</section>
+    <section data-test="about" id="about">about</section>
+    <section data-test="reviews" id="reviews">reviews</section>
+    <section data-test="adv">adv</section>
+    <section data-test="gallery" id="gallery">gallery</section>
+    <section data-test="form">form</section>
+    <section data-test="footer" id="contacts">footer</section>
+  </main>
+  <script type="module" src="js/main.js"></script>
+</body>
 
 </html>
