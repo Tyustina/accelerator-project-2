@@ -1,0 +1,160 @@
+@use "../global/variables.scss" as v;
+@use "../global/mixin.scss" as m;
+
+.nav {
+  @include m.desktop {
+    grid-column: 2/3;
+    justify-items: center;
+  }
+}
+
+.nav__list {
+    @include m.list-reset;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: v.$white;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: auto;
+    background-color: v.$additional;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    z-index: 8;
+    transition: left 0.5s ease;
+
+
+  @include m.tablet {
+    font-size: 16px;
+  }
+
+  @include m.desktop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+}
+
+.nav--closed .nav__list {
+  left: -300%;
+}
+
+.nav__item {
+  @include m.container;
+  display: block;
+
+  @include m.desktop {
+    width: auto;
+    padding: 0;
+  }
+}
+
+.nav__link {
+  color: inherit;
+  padding: 3px 5px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+
+  &:hover {
+    border-bottom: 1px solid v.$white;
+  }
+
+  &:focus {
+    border: 1px solid v.$white;
+  }
+
+  &:active {
+    border: none;
+    color: v.$blue;
+  }
+
+  &--disabled {
+    color: v.$disabled;
+  }
+}
+
+.nav__button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  z-index: 10;
+}
+
+.nav__button {
+  position: relative;
+  display: flex;
+  width: 26px;
+  height: 26px;
+  align-items: center;
+  outline: 1px solid red;
+
+}
+
+.nav__button-marker {
+  display: block;
+  width: 16px;
+  height: 2px;
+  background-color: v.$white;
+  transition: background-color 0.3s ease;
+}
+
+.nav__button-marker::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: v.$white;
+  top: 4px;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.nav__button-marker::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: v.$white;
+  bottom: 4px;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.nav--opened .nav__button-marker {
+  background-color: transparent;
+}
+
+.nav--opened .nav__button-marker::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: v.$white;
+  top: 12px;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+.nav--opened .nav__button-marker::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: v.$white;
+  bottom: 12px;
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease;
+}
