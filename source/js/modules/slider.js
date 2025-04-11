@@ -13,9 +13,6 @@ new Swiper('.hero__swiper', {
     bulletActiveClass: 'main-slider__bullet--active',
     type: 'bullets',
     clickable: true,
-    renderBullet: function (index, className){
-      return '<button class="' + className + '" aria-label="Перейти к слайду ' + (index + 1) + '"></button>';
-    },
   },
   breakpoints: {
     1440: {
