@@ -2,10 +2,13 @@
 @use "../global/mixin.scss" as m;
 
 .button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;
-  text-align: center;
   padding: 20px;
   background-color: v.$additional;
   text-decoration: none;
@@ -13,7 +16,7 @@
   border: 1px solid transparent;
   box-sizing: border-box;
   &:hover {
-    background-color: v.$white;
+    background-color: transparent;
     border-color: v.$blue;
     color: v.$blue;
   }

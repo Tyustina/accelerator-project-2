@@ -17,17 +17,18 @@
 </head>
 
 <body class="page-body">
+  <div class="page-body__overlay"></div>
   <header class="header" data-test="header">
     <div class="header__container">
       <nav class="header__nav nav nav--closed">
-          <ul class="nav__list">
-            <li class="nav__item"><a class="nav__link" href="#tours">Туры</a></li>
-            <li class="nav__item"><a class="nav__link" href="#training">Обучение</a></li>
-            <li class="nav__item"><a class="nav__link" href="#about">О нас</a></li>
-            <li class="nav__item"><a class="nav__link" href="#reviews">Отзывы</a></li>
-            <li class="nav__item"><a class="nav__link" href="#gallery">Фотографии</a></li>
-            <li class="nav__item"><a class="nav__link" href="#contacts">Контакты</a></li>
-          </ul>
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="#tours">Туры</a></li>
+          <li class="nav__item"><a class="nav__link" href="#training">Обучение</a></li>
+          <li class="nav__item"><a class="nav__link" href="#about">О нас</a></li>
+          <li class="nav__item"><a class="nav__link" href="#reviews">Отзывы</a></li>
+          <li class="nav__item"><a class="nav__link" href="#gallery">Фотографии</a></li>
+          <li class="nav__item"><a class="nav__link" href="#contacts">Контакты</a></li>
+        </ul>
         <button class="nav__button"><span class="nav__button-marker"></span></button>
       </nav>
       <svg class="header__logo">
@@ -42,28 +43,28 @@
       <h2 class="visually-hidden">Лучшие туры</h2>
       <div class="hero__swiper main-slider swiper">
         <ul class="main-slider__list swiper-wrapper">
-          <li class="main-slider__item main-slider__item--kavkaz swiper-slide">
+          <li class="main-slider__item main-slider__item--caucasus swiper-slide">
             <div>
               <h3>Захватывающие вершины Кавказа</h3>
-              <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход на вершину
+              <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход на&nbsp;вершину
                 горы Чегет.</p>
               <a class="main-slider__link button" href="#">Смотреть тур</a>
             </div>
-            <div>
-              <p>6 дней/5 ночей</p>
-              <p>Высокая сложность</p>
+            <div class="main-slider__info">
+              <p class="main-slider__info-time">6 дней/5 ночей</p>
+              <p class="main-slider__info-level">Высокая сложность</p>
             </div>
           </li>
-          <li class="main-slider__item swiper-slide">
+          <li class="main-slider__item main-slider__item--kamchatka swiper-slide">
             <div>
               <h3>Невероятная природа Камчатки</h3>
               <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых нетронутых
                 уголков дикой природы в мире.</p>
-              <a class="main-slider__link main-slider__item--kamchatka button" href="#">Смотреть тур</a>
+              <a class="main-slider__link  button" href="#">Смотреть тур</a>
             </div>
-            <div>
-              <p>9 дней/10 ночей</p>
-              <p>Средняя сложность</p>
+            <div class="main-slider__info">
+              <p class="main-slider__info-time">9 дней/10 ночей</p>
+              <p class="main-slider__info-level">Средняя сложность</p>
             </div>
           </li>
           <li class="main-slider__item main-slider__item--altay swiper-slide">
@@ -73,15 +74,47 @@
                 ландшафтов Алтайских гор.</p>
               <a class="main-slider__link button" href="#">Смотреть тур</a>
             </div>
-            <div>
-              <p>8 дней/7 ночей</p>
-              <p>Лёгкая сложность</p>
+            <div class="main-slider__info">
+              <p class="main-slider__info-time">8 дней/7 ночей</p>
+              <p class="main-slider__info-level">Лёгкая сложность</p>
+            </div>
+          </li>
+        </ul>
+        <div class="main-slider__pagination swiper-pagination">
+        </div>
+      </div>
+    </section>
+    <section data-test="tours" id="tours">
+      <h2>Ближайшие туры</h2>
+      <div class="tours__swiper swiper">
+        <ul class=" tours__list swiper-wrapper">
+          <li class="tours__item card swiper-slide">
+            <div class="card__info">
+              <p class="card__location">Кавказ</p>
+              <div class="card__period">
+                <p class="card__period-day">4 дня</p>
+                <p class="card__period-night">3 ночи</p>
+              </div>
+            </div>
+            <h3 class="card__title">Путешествие вокруг Эльбруса</h3>
+            <div class="card__details">
+              <dl class="card__details-container">
+                <dt class="card__details-title">Сложность</dt>
+                <dd class="card__details-desk">stars</dd>
+              </dl>
+              <dl class="card__details-container">
+                <dt class="card__details-title">Даты набора:</dt>
+                <dd class="card__details-desk">12.06-19.06</dd>
+              </dl>
+              <dl class="card__details-container">
+                <dt class="card__details-title">Группа:</dt>
+                <dd class="card__details-desk">до 15 человек</dd>
+              </dl>
             </div>
           </li>
         </ul>
       </div>
     </section>
-    <section data-test="tours" id="tours">tours</section>
     <section data-test="training" id="training">training</section>
     <section data-test="about" id="about">about</section>
     <section data-test="reviews" id="reviews">reviews</section>

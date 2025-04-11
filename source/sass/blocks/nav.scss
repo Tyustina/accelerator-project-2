@@ -34,12 +34,15 @@
   }
 
   @include m.desktop {
+    position: static;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 30px;
     text-transform: none;
+    font-weight: 400;
     letter-spacing: 0;
+    padding: 0;
   }
 }
 
@@ -83,20 +86,19 @@
 }
 
 .nav__button {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  z-index: 10;
-}
-
-.nav__button {
   position: relative;
   display: flex;
   width: 26px;
   height: 26px;
   align-items: center;
-  outline: 1px solid red;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  z-index: 10;
 
+  @include m.desktop {
+    display: none;
+  }
 }
 
 .nav__button-marker {

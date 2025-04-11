@@ -1,0 +1,188 @@
+@use "../global/variables.scss" as v;
+@use "../global/mixin.scss" as m;
+
+.main-slider__list {
+  @include m.list-reset;
+}
+
+.main-slider .swiper-slide {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  min-height: 568px;
+  transform: none;
+
+  @include m.tablet {
+    min-height: 1034px;
+  }
+
+  @include m.desktop {
+    min-height: 800px
+  }
+}
+
+.main-slider__item {
+  @include m.container;
+  background-color: v.$primary;
+}
+
+
+.main-slider__item--caucasus {
+  background-image:
+    image-set(url("../../img/bg-caucasus.webp") 1x type("image/webp"),
+    url("../../img//bg-caucasus@2x.webp") 2x type("image/webp"),
+    url("../../img/bg-caucasus.jpg") 1x type("image/jpeg"),
+    url("../../img/bg-caucasus@2x.jpg") 2x type("image/jpeg"));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -51px 0;
+  transform: background-position 0.3s ease ;
+
+  @media (min-width: 360px) {
+    background-position: bottom center;
+  }
+
+  @include m.desktop {
+    background-image:
+    image-set(url("../../img/bg-caucasus-big.webp") 1x type("image/webp"),
+    url("../../img//bg-caucasus-big@2x.webp") 2x type("image/webp"),
+    url("../../img/bg-caucasus-bi.jpg") 1x type("image/jpeg"),
+    url("../../img/bg-caucasus-bi@2x.jpg") 2x type("image/jpeg"));
+  }
+}
+
+.main-slider__item--kamchatka {
+  background-image:
+    image-set(url("../../img/bg-kamchatka.webp") 1x type("image/webp"),
+    url("../../img//bg-kamchatka@2x.webp") 2x type("image/webp"),
+    url("../../img/bg-kamchatka.jpg") 1x type("image/jpeg"),
+    url("../../img/bg-kamchatka@2x.jpg") 2x type("image/jpeg"));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -51px 0;
+  transform: background-position 0.3s ease ;
+
+  @media (min-width: 360px) {
+    background-position: bottom center;
+  }
+
+  @include m.desktop {
+    background-image:
+    image-set(url("../../img/bg-kamchatka-big.webp") 1x type("image/webp"),
+    url("../../img//bg-kamchatka-big@2x.webp") 2x type("image/webp"),
+    url("../../img/bg-kamchatka-bi.jpg") 1x type("image/jpeg"),
+    url("../../img/bg-kamchatka-bi@2x.jpg") 2x type("image/jpeg"));
+  }
+}
+
+.main-slider__item--altay {
+  background-image:
+    image-set(url("../../img/bg-altay.webp") 1x type("image/webp"),
+    url("../../img//bg-altay@2x.webp") 2x type("image/webp"),
+    url("../../img/bg-altay.jpg") 1x type("image/jpeg"),
+    url("../../img/bg-altay@2x.jpg") 2x type("image/jpeg"));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -51px 0;
+  transform: background-position 0.3s ease ;
+
+  @media (min-width: 360px) {
+    background-position: bottom center;
+  }
+
+  @include m.desktop {
+    background-image:
+    image-set(url("../../img/bg-altay-big.webp") 1x type("image/webp"),
+    url("../../img//bg-altay-big@2x.webp") 2x type("image/webp"),
+    url("../../img/bg-altay-bi.jpg") 1x type("image/jpeg"),
+    url("../../img/bg-altay-bi@2x.jpg") 2x type("image/jpeg"));
+  }
+}
+
+.main-slider__item div:first-child{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 17px;
+}
+
+.main-slider__item h3 {
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 100%;
+  text-align: center;
+  color: v.$white;
+  margin: 0;
+  margin-bottom: 15px;
+
+  @include m.tablet {
+    font-size: 56px;
+  }
+
+  @include m.desktop {
+    font-size: 77px;
+  }
+}
+
+.main-slider__item p {
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  color: v.$white;
+  margin: 0;
+  margin-bottom: 60px;
+
+  @include m.tablet {
+    font-size: 17px;
+    line-height: 24px;
+    padding: 0 80px;
+  }
+}
+
+.main-slider__link {
+  padding: 19px 33px;
+}
+
+.main-slider__info {
+  display: none;
+
+  @include m.desktop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+.main-slider__info p {
+  font-size: 12px;
+  line-height: 133%;
+  padding: 14px 20px 14px 40px;
+  border: 1px solid v.$white;
+  color: v.$white;
+}
+
+.main-slider .swiper-pagination {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.main-slider__bullet {
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: transparent;
+  border: 1px solid v.$white;
+}
+
+.main-slider__bullet--active {
+  background-color: v.$white;
+}

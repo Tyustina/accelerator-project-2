@@ -4,7 +4,7 @@
 .header {
   position: relative;
   background-color: v.$additional;
-
+  z-index: 100;
 }
 
 .header__container {

@@ -1,0 +1,64 @@
+@use "../global/variables.scss" as v;
+@use "../global/mixin.scss" as m;
+
+.card__info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-items: center;
+}
+
+.card__location {
+  position: relative;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  background-color: v.$additional;
+  padding: 8px 12px 8px 34px;
+  color: v.$white;
+  margin: 0;
+  text-align: center;
+}
+
+.card__location::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 9px;
+  height: 12px;
+  left: 12px;
+  top: 4px;
+  mask-image: url("/__spritemap#sprite-pin-color-view");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  background-color: v.$white;
+}
+
+.card__period {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.card__period-day,
+.card__period-night {
+  position: relative;
+  margin: 0;
+  padding: 4px 0 4px 32px;
+}
+
+.card__period-day::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 0;
+  mask-image: url("/__spritemap#sprite-pin-color-view");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  background-color: v.$white;
+}
