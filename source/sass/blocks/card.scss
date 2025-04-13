@@ -16,7 +16,6 @@
   line-height: 100%;
   background-color: v.$additional;
   padding: 8px 12px 8px 34px;
-  color: v.$white;
   margin: 0;
   text-align: center;
 }
@@ -25,10 +24,10 @@
   position: absolute;
   content: "";
   display: block;
-  width: 9px;
-  height: 12px;
-  left: 12px;
-  top: 4px;
+  width: 16px;
+  height: 16px;
+  left: 13px;
+  top: 5px;
   mask-image: url("/__spritemap#sprite-pin-color-view");
   mask-repeat: no-repeat;
   mask-size: cover;
@@ -47,6 +46,8 @@
   position: relative;
   margin: 0;
   padding: 4px 0 4px 32px;
+  font-weight: 500;
+  font-size: 12px;
 }
 
 .card__period-day::before {
@@ -57,7 +58,78 @@
   height: 20px;
   left: 0;
   top: 0;
-  mask-image: url("/__spritemap#sprite-pin-color-view");
+  mask-image: url("/__spritemap#sprite-sun-view");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  background-color: v.$white;
+}
+
+.card__period-night::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 0;
+  mask-image: url("/__spritemap#sprite-moon-view");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  background-color: v.$white;
+}
+
+.card__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.card__details {
+  display: grid;
+grid-template-columns: repeat(3,max-content);
+  gap: 8px;
+}
+
+.card__details-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0;
+}
+
+.card__details-title {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 100%;
+}
+
+.card__details-desk {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 100%;
+  margin: 0;
+}
+
+.card__details-desk--4 {
+  content: "";
+  display: block;
+  width: 84px;
+  height: 16px;
+  mask-image: url("/__spritemap#sprite-stars-4-view");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  background-color: v.$white;
+}
+
+.card__details-desk--5 {
+  content: "";
+  display: block;
+  width: 84px;
+  height: 16px;
+  mask-image: url("/__spritemap#sprite-stars-5-view");
   mask-repeat: no-repeat;
   mask-size: cover;
   background-color: v.$white;

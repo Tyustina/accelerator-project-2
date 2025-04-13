@@ -1,0 +1,58 @@
+@use "../global/variables.scss" as v;
+@use "../global/mixin.scss" as m;
+
+.training-card {
+  position: relative;
+  border: 1px solid v.$additional20;
+  padding: 15px;
+
+  @include m.tablet {
+    min-height: 388px;
+  }
+}
+
+.training-card__link {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid v.$primary30;
+  top: 230px;
+  right: 15px;
+}
+
+.training-card__link-icon {
+  width: 14px;
+  height: 8px;
+}
+
+.training-card__img {
+  display: block;
+  @include m.tablet {
+    width: 182px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  @include m.desktop {
+    width: 255px;
+    height: 200px;
+  }
+}
+
+.training-card h3 {
+  width: 60%;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0;
+}
+
+.training-card p {
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0;
+  text-align: left;
+}

@@ -46,7 +46,8 @@
           <li class="main-slider__item main-slider__item--caucasus swiper-slide">
             <div>
               <h3>Захватывающие вершины Кавказа</h3>
-              <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход на&nbsp;вершину
+              <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход
+                на&nbsp;вершину
                 горы Чегет.</p>
               <a class="main-slider__link button" href="#">Смотреть тур</a>
             </div>
@@ -84,39 +85,234 @@
         </div>
       </div>
     </section>
-    <section data-test="tours" id="tours">
-      <h2>Ближайшие туры</h2>
+    <section class="tours" data-test="tours" id="tours">
+      <h2 class="tours__title title">Ближайшие туры</h2>
       <div class="tours__swiper swiper">
-        <ul class=" tours__list swiper-wrapper">
-          <li class="tours__item card swiper-slide">
-            <div class="card__info">
-              <p class="card__location">Кавказ</p>
-              <div class="card__period">
-                <p class="card__period-day">4 дня</p>
-                <p class="card__period-night">3 ночи</p>
+        <div class="tours__buttons">
+          <button class="tours__button tours__button--prev swiper-button-prev swiper-button-disabled"
+            type="button"><span class="visually-hidden">Предыдущий
+              слайд</span></button>
+          <button class="tours__button tours__button--next swiper-button-next swiper-button-disabled"
+            type="button"><span class="visually-hidden">Предыдущий
+              слайд</span></button>
+        </div>
+        <ul class="tours__list swiper-wrapper">
+          <li class="tours__item tours__item--elbrus card swiper-slide">
+            <div class="card__text-content">
+              <div class="card__info">
+                <p class="card__location">Кавказ</p>
+                <div class="card__period">
+                  <p class="card__period-day">4 дня</p>
+                  <p class="card__period-night">3 ночи</p>
+                </div>
+              </div>
+              <h3 class="card__title">Путешествие вокруг Эльбруса</h3>
+              <div class="card__details">
+                <dl class="card__details-container">
+                  <dt class="card__details-title">Сложность</dt>
+                  <dd class="card__details-desk card__details-desk--4"><span class="visually-hidden">Сложность
+                      тура.</span></dd>
+                </dl>
+                <dl class="card__details-container">
+                  <dt class="card__details-title">Даты набора:</dt>
+                  <dd class="card__details-desk">12.06-19.06</dd>
+                </dl>
+                <dl class="card__details-container">
+                  <dt class="card__details-title">Группа:</dt>
+                  <dd class="card__details-desk">до 15 чел.</dd>
+                </dl>
               </div>
             </div>
-            <h3 class="card__title">Путешествие вокруг Эльбруса</h3>
-            <div class="card__details">
-              <dl class="card__details-container">
-                <dt class="card__details-title">Сложность</dt>
-                <dd class="card__details-desk">stars</dd>
-              </dl>
-              <dl class="card__details-container">
-                <dt class="card__details-title">Даты набора:</dt>
-                <dd class="card__details-desk">12.06-19.06</dd>
-              </dl>
-              <dl class="card__details-container">
-                <dt class="card__details-title">Группа:</dt>
-                <dd class="card__details-desk">до 15 человек</dd>
-              </dl>
+          </li>
+          <li class="tours__item tours__item--beluha card swiper-slide">
+            <div class="card__text-content">
+              <div class="card__info">
+                <p class="card__location">Алтай</p>
+                <div class="card__period">
+                  <p class="card__period-day">14 дней</p>
+                  <p class="card__period-night">13 ночей</p>
+                </div>
+              </div>
+              <h3 class="card__title">Путь к подножию Белухи</h3>
+              <div class="card__details">
+                <dl class="card__details-container">
+                  <dt class="card__details-title">Сложность</dt>
+                  <dd class="card__details-desk card__details-desk--4"><span class="visually-hidden">Сложность
+                      тура.</span></dd>
+                </dl>
+                <dl class="card__details-container">
+                  <dt class="card__details-title">Даты набора:</dt>
+                  <dd class="card__details-desk">14.06-23.06</dd>
+                </dl>
+                <dl class="card__details-container">
+                  <dt class="card__details-title">Группа:</dt>
+                  <dd class="card__details-desk">до 25 чел.</dd>
+                </dl>
+              </div>
             </div>
+          </li>
+          <li class="tours__item tours__item--fisht card swiper-slide">
+            <div class="card__text-content">
+              <div class="card__info">
+                <p class="card__location">Адыгея</p>
+                <div class="card__period">
+                  <p class="card__period-day">7 дней</p>
+                  <p class="card__period-night">6 ночей</p>
+                </div>
+              </div>
+              <h3 class="card__title">Через Фишт к Чёрному морю и обратно</h3>
+              <div class="card__details">
+                <dl class="card__details-container">
+                  <dt class="card__details-title">Сложность</dt>
+                  <dd class="card__details-desk card__details-desk--4"><span class="visually-hidden">Сложность
+                      тура.</span></dd>
+                </dl>
+                <dl class="card__details-container">
+                  <dt class="card__details-title">Даты набора:</dt>
+                  <dd class="card__details-desk">15.07-19.07</dd>
+                </dl>
+                <dl class="card__details-container">
+                  <dt class="card__details-title">Группа:</dt>
+                  <dd class="card__details-desk">до 22 чел.</dd>
+                </dl>
+              </div>
+            </div>
+          </li>
+          <li class="tours__item tours__item--manaraga card swiper-slide">
+            <div class="card__text-content">
+              <div class="card__info">
+                <p class="card__location">Урал</p>
+                <div class="card__period">
+                  <p class="card__period-day">9 дней</p>
+                  <p class="card__period-night">10 ночей</p>
+                </div>
+              </div>
+              <h3 class="card__title">Восхождение Манарага</h3>
+              <div class="card__details">
+                <dl class="card__details-container">
+                  <dt class="card__details-title">Сложность</dt>
+                  <dd class="card__details-desk card__details-desk--5"><span class="visually-hidden">Сложность
+                      тура.</span></dd>
+                </dl>
+                <dl class="card__details-container">
+                  <dt class="card__details-title">Даты набора:</dt>
+                  <dd class="card__details-desk">12.07-19.07</dd>
+                </dl>
+                <dl class="card__details-container">
+                  <dt class="card__details-title">Группа:</dt>
+                  <dd class="card__details-desk">до 7 чел.</dd>
+                </dl>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <a class="tours__link" href="#">Показать все туры</a>
+      </div>
+    </section>
+    <section class="training" data-test="training" id="training">
+      <h2 class="training__main-title title">Обычение</h2>
+      <p class="training__text">Обучение проводится квалифицированными специалистами, за плечами которых десятки
+        пройденных маршрутов Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.</p>
+      <h2 class="training__title title">Наши инструкторы</h2>
+      <div class="training__swiper swiper">
+        <div class="training__buttons">
+          <button class="training-card__button training-card__button--prev swiper-button-prev swiper-button-disabled"
+            type="button"><span class="visually-hidden">Предыдущий
+              слайд</span></button>
+          <button class="training-card__button training-card__button--next swiper-button-next swiper-button-disabled"
+            type="button"><span class="visually-hidden">Предыдущий
+              слайд</span></button>
+        </div>
+        <ul class="training-card__list swiper-wrapper">
+          <li class="training-card swiper-slide">
+            <picture>
+              <source type="image/webp" srcset="./img/trainers/trainer-1.webp 1x, ./img/trainers/trainer-1@2x.webp 2x"
+                width="260" height="200">
+              <img class="training-card__img" src="./img/trainers/trainer-1.jpg" srcset="./img/trainers/trainer-1@2x.jpg"
+                alt="Александр Прокофьев." width="260" height="200">
+            </picture>
+              <h3>Александр Прокофьев</h3>
+              <p>Строгий и внимательный инструктор, весёлый и общительный человек. Любит природу.</p>
+              <a class="training-card__link" href="vk.com">
+                <svg class="training-card__link-icon">
+                  <use href="/__spritemap#sprite-vk"></use>
+                </svg><span class="visually-hidden">Перейти на страницу тренера
+                  во Вконтакте.</span></a>
+          </li>
+          <li class="training-card swiper-slide">
+            <picture>
+              <source type="image/webp" srcset="./img/trainers/trainer-2.webp 1x, ./img/trainers/trainer-2@2x.webp 2x"
+                width="260" height="200">
+              <img class="training-card__img" src="./img/trainers/trainer-2.jpg" srcset="./img/trainers/trainer-2@2x.jpg"
+                alt="Светлана Афиногенова." width="260" height="200">
+            </picture>
+              <h3>Светлана Афиногенова</h3>
+              <p>Видеть мир вокруг, познавать его опасности, находить друг друга, становиться ближе, чувствовать — в
+                этом назначение жизни.</p>
+                <a class="training-card__link" href="vk.com">
+                  <svg class="training-card__link-icon">
+                    <use href="/__spritemap#sprite-vk"></use>
+                  </svg><span class="visually-hidden">Перейти на страницу тренера
+                    во Вконтакте.</span></a>
+          </li>
+          <li class="training-card swiper-slide">
+            <picture>
+              <source type="image/webp" srcset="./img/trainers/trainer-3.webp 1x, ./img/trainers/trainer-3@2x.webp 2x"
+                width="260" height="200">
+              <img class="training-card__img" src="./img/trainers/trainer-3.jpg" srcset="./img/trainers/trainer-3@2x.jpg"
+                alt="Надежда Колесниченко." width="260" height="200">
+            </picture>
+              <h3>Надежда Колесниченко</h3>
+              <p>Участники говорят, что Надежда ответственная, приятная в общении, и в поездках с ней чувствуешь себя
+                спокойно и уверенно.</p>
+                <a class="training-card__link" href="vk.com">
+                  <svg class="training-card__link-icon">
+                    <use href="/__spritemap#sprite-vk"></use>
+                  </svg><span class="visually-hidden">Перейти на страницу тренера
+                    во Вконтакте.</span></a>
+          </li>
+          <li class="training-card swiper-slide">
+            <picture>
+              <source type="image/webp" srcset="./img/trainers/trainer-4.webp 1x, ./img/trainers/trainer-4@2x.webp 2x"
+                width="260" height="200">
+              <img class="training-card__img" src="./img/trainers/trainer-4.jpg" srcset="./img/trainers/trainer-4@2x.jpg"
+                alt="Федор Кайгородов." width="260" height="200">
+            </picture>
+              <h3>Федор Кайгородов</h3>
+              <p>Опыт походов: Ходит в походы с 2001 года. В России побывал в горных районах Хибины, Архыз, много
+                путешествует по Европе.</p>
+              <a class="training-card__link" href="vk.com">
+                <svg class="training-card__link-icon">
+                  <use href="/__spritemap#sprite-vk"></use>
+                </svg><span class="visually-hidden">Перейти на страницу тренера
+                  во Вконтакте.</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="training__process">
+        <h3 class="training__subtitle">Процесс обучения</h3>
+        <ul class="training__list">
+          <li class="training__item training__item--drive ">Изучение спортивного
+            туристского движения
+          </li>
+          <li class="training__item training__item--eqip">Подготовка и техническое
+            снаряжение в походах
+          </li>
+          <li class="training__item training__item--barrier">Разъяснение сложности
+            горных препятствий
+          </li>
+          <li class="training__item training__item--ecology">Лекции по окружающей среде, экологии и гигиене
           </li>
         </ul>
       </div>
     </section>
-    <section data-test="training" id="training">training</section>
-    <section data-test="about" id="about">about</section>
+    <section class="about" data-test="about" id="about">
+      <h2 class="title">О Нас</h2>
+      <h3 class="about__subtitle">История компании</h3>
+      <p class="about__text">В далёком 2000 году мы начали заниматься туризмом — походы, поездки, восхождения, нам это настолько понравилось, что мы этим стали жить. Спустя 5 лет, в 2005 году мы основали компанию, чтобы показывать людям удивительные места нашей страны.</p>
+      <h3>Наша цель</h3>
+      <p>Подарить вам незабываемые впечатления от похода в горы. Мы берём на себя все организационные вопросы. При организации мы обязательно учтём все ваши пожелания. Вам останется только наслаждаться незабываемым приключением в приятной компании.</p>
+    </section>
     <section data-test="reviews" id="reviews">reviews</section>
     <section data-test="adv">adv</section>
     <section data-test="gallery" id="gallery">gallery</section>

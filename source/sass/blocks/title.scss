@@ -1,0 +1,18 @@
+@use "../global/variables.scss" as v;
+@use "../global/mixin.scss" as m;
+
+.title {
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 100%;
+  text-align: left;
+  margin: 0;
+
+  @include m.tablet {
+    font-size: 25px;
+  }
+
+  @include m.desktop {
+    font-size: 35px;
+  }
+}

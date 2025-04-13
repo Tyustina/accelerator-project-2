@@ -1,4 +1,152 @@
 @use "../global/variables.scss" as v;
 @use "../global/mixin.scss" as m;
 
+.tours {
+  @include m.container;
+  padding-top: 36px;
+  padding-bottom: 30px;
+}
 
+.tours .swiper {
+  display: grid;
+  padding: 60px 0;
+}
+
+.tours__swiper .swiper-wrapper {
+  position: relative;
+}
+
+.tours__title {
+  position: absolute;
+}
+
+.tours__title::before {
+  position: absolute;
+  content: "Ближайшие туры";
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 26px;
+  color: v.$primary;
+  bottom: 0.4em;
+  opacity: 0.03;
+}
+
+.tours__list {
+  @include m.list-reset;
+}
+
+.tours .swiper-slide {
+  display: flex;
+  align-items: flex-end;
+  min-height: 416px;
+}
+
+.card__text-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0 20px 30px 20px;
+  color: v.$white;
+}
+
+.tours .swiper-slide::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.6) 100%);
+  z-index: -1;
+}
+
+.tours__item--elbrus {
+  background-color: v.$additional;
+  background-image:
+    image-set(url("../../img/tours-elbrus.webp") 1x type("image/webp"),
+      url("../../img/tours-elbrus@2x.webp") 2x type("image/webp"),
+      url("../../img/tours-elbrus.jpg") 1x type("image/jpeg"),
+      url("../../img/tours-elbrus@2x.jpg") 2x type("image/jpeg"));
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
+.tours__item--beluha {
+  background-color: v.$additional;
+  background-image:
+    image-set(url("../../img/tours-beluha.webp") 1x type("image/webp"),
+      url("../../img/tours-beluha@2x.webp") 2x type("image/webp"),
+      url("../../img/tours-beluha.jpg") 1x type("image/jpeg"),
+      url("../../img/tours-beluha@2x.jpg") 2x type("image/jpeg"));
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.tours__item--fisht {
+  background-color: v.$additional;
+  background-image:
+    image-set(url("../../img/tours-fisht.webp") 1x type("image/webp"),
+      url("../../img/tours-fisht@2x.webp") 2x type("image/webp"),
+      url("../../img/tours-fisht.jpg") 1x type("image/jpeg"),
+      url("../../img/tours-fisht@2x.jpg") 2x type("image/jpeg"));
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.tours__item--manaraga {
+  background-color: v.$additional;
+  background-image:
+    image-set(url("../../img/tours-manaraga.webp") 1x type("image/webp"),
+      url("../../img/tours-manaraga@2x.webp") 2x type("image/webp"),
+      url("../../img/tours-manaraga.jpg") 1x type("image/jpeg"),
+      url("../../img/tours-manaraga@2x.jpg") 2x type("image/jpeg"));
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.tours__buttons {
+  display: none;
+
+  @include m.tablet {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    right: 0;
+  }
+}
+
+.tours__button {
+  width: 37px;
+  height: 35px;
+  background-color: v.$additional;
+}
+
+.tours__link {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: v.$primary;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+.tours__link::after {
+  display: block;
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-left: 2px solid v.$primary;
+  border-top: 2px solid v.$primary;
+  background-color: transparent;
+  transform: rotate(135deg);
+}

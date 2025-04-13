@@ -1,0 +1,83 @@
+@use "../global/variables.scss" as v;
+@use "../global/mixin.scss" as m;
+
+.training {
+  padding-top: 36px;
+}
+
+.training .swiper {
+  @include m.container
+}
+
+.training .swiper-wrapper {
+  padding: 0;
+}
+
+.training .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.training__main-title {
+  margin-bottom: 35px;
+}
+
+.training__text {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.training__list {
+  @include m.list-reset;
+}
+.training__item {
+  display: flex;
+}
+
+.training__item--drive::before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  mask-image: url("/__spritemap#sprite-drive-view");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  background-color: v.$primary;
+}
+
+.training__item--eqip::before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  mask-image: url("/__spritemap#sprite-eqip-view");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  background-color: v.$primary;
+}
+
+.training__item--barrier::before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  mask-image: url("/__spritemap#sprite-mountain-view");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  background-color: v.$primary;
+}
+
+.training__item--ecology::before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  mask-image: url("/__spritemap#sprite-forest-view");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  background-color: v.$primary;
+}
