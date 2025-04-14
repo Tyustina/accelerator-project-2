@@ -17,18 +17,12 @@
 }
 
 .tours__title {
-  position: absolute;
+  position: relative;
 }
 
 .tours__title::before {
-  position: absolute;
+  @include m.title-shadow;
   content: "Ближайшие туры";
-  font-weight: 800;
-  font-size: 26px;
-  line-height: 26px;
-  color: v.$primary;
-  bottom: 0.4em;
-  opacity: 0.03;
 }
 
 .tours__list {
@@ -111,18 +105,21 @@
   display: none;
 
   @include m.tablet {
-    position: absolute;
+    // position: absolute;
     display: flex;
     flex-direction: row;
+    gap: 4px;
     top: 0;
     right: 0;
   }
 }
 
-.tours__button {
-  width: 37px;
-  height: 35px;
-  background-color: v.$additional;
+.tours__button--next {
+  @include m.button-next;
+}
+
+.tours__button--prev {
+  @include m.button-prev;
 }
 
 .tours__link {

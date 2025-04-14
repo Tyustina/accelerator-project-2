@@ -1,0 +1,84 @@
+@use "../global/variables.scss" as v;
+@use "../global/mixin.scss" as m;
+
+.about {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @include m.tablet {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 270px;
+    padding: 40px 48px;
+  }
+
+  @include m.desktop {
+    padding: 100px 120px 178px 120px;
+    grid-template-columns: 1fr 660px;
+  }
+}
+
+.about__container {
+  @include m.container;
+
+  @include m.tablet {
+    grid-column: 2/-1;
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.about::before {
+  position: relative;
+  content: "";
+  display: block;
+  width: 100%;
+  min-height: 400px;
+  height: fit-content;
+  background-image:
+    image-set(url("../../img/about.webp") 1x type("image/webp"),
+      url("../../img/about@2x.webp") 2x type("image/webp"),
+      url("../../img/about.jpg") 1x type("image/jpeg"),
+      url("../../img/about@2x.jpg") 2x type("image/jpeg"));
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+
+  @include m.tablet {
+    position: absolute;
+    width: 542px;
+    height: 350px;
+    background-size: contain;
+    z-index: -1;
+    background-position: center left;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @include m.desktop {
+    width: 660px;
+    height: 498px;
+  }
+}
+
+.about__list {
+  @include m.list-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.about__title {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.about__title::before {
+  @include m.title-shadow;
+  content: "О нас";
+}
+
+.about__subtitle {
+  margin-bottom: 15px;
+}

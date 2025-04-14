@@ -1,0 +1,14 @@
+@use "../global/variables.scss" as v;
+@use "../global/mixin.scss" as m;
+
+.reviews {
+  width: 320px;
+  margin: 0 auto;;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.reviews .swiper-wrapper {
+  padding: 20px;
+  margin: 0;
+}

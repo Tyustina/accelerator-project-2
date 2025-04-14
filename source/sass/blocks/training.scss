@@ -2,11 +2,8 @@
 @use "../global/mixin.scss" as m;
 
 .training {
+  @include m.container;
   padding-top: 36px;
-}
-
-.training .swiper {
-  @include m.container
 }
 
 .training .swiper-wrapper {
@@ -21,37 +18,67 @@
 }
 
 .training__main-title {
+  position: relative;
   margin-bottom: 35px;
 }
 
+.training__main-title::before {
+  @include m.title-shadow;
+  content: "Обучение";
+}
+
 .training__text {
-  font-size: 16px;
-  line-height: 24px;
-  margin: 0;
+  margin-bottom: 25px;
+}
+
+.training__process {
+  @include m.container
+}
+
+.training__subtitle {
   margin-bottom: 25px;
 }
 
 .training__list {
   @include m.list-reset;
-}
-.training__item {
   display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border-left: 2px solid v.$additional;
+  padding-left: 15px;
+}
+
+.training__item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 82%;
+  font-size: 12px;
+  line-height: 18px;
+  padding-left: 40px;
 }
 
 .training__item--drive::before {
+  position: absolute;
   content: "";
   display: block;
+  left: 0;
+  top: 0;
   width: 25px;
   height: 25px;
   mask-image: url("/__spritemap#sprite-drive-view");
   mask-repeat: no-repeat;
   mask-size: cover;
+  mask-position: center;
   background-color: v.$primary;
 }
 
 .training__item--eqip::before {
+  position: absolute;
   content: "";
   display: block;
+  left: 0;
+  top: 0;
   width: 25px;
   height: 25px;
   mask-image: url("/__spritemap#sprite-eqip-view");
@@ -61,8 +88,11 @@
 }
 
 .training__item--barrier::before {
+  position: absolute;
   content: "";
   display: block;
+  left: 0;
+  top: 0;
   width: 25px;
   height: 25px;
   mask-image: url("/__spritemap#sprite-mountain-view");
@@ -72,12 +102,35 @@
 }
 
 .training__item--ecology::before {
+  position: absolute;
   content: "";
   display: block;
+  left: 0;
+  top: 0;
   width: 25px;
   height: 25px;
   mask-image: url("/__spritemap#sprite-forest-view");
   mask-repeat: no-repeat;
   mask-size: cover;
   background-color: v.$primary;
+}
+
+.training__buttons {
+  display: none;
+
+  @include m.tablet {
+    // position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    top: 0;
+    right: 0;
+  }
+}
+.training-card__button--next {
+  @include m.button-next;
+}
+
+.training-card__button--prev {
+  @include m.button-prev;
 }

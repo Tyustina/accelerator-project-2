@@ -6,6 +6,22 @@
   list-style: none;
 }
 
+@mixin title-shadow {
+  position: absolute;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 26px;
+  color: v.$primary;
+  bottom: 0.4em;
+  opacity: 0.03;
+  @media (min-width: v.$tablet-width) {
+    font-size: 40px;
+  }
+  @media (min-width: v.$desktop-width) {
+    font-size: 55px;
+  }
+}
+
 @mixin only-mobile {
   @media (max-width: v.$only-mobile-width) {
     @content;
@@ -47,4 +63,45 @@
     padding-left: 120px;
     padding-right: 120px;
   }
+}
+
+@mixin button-prev {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 37px;
+  height: 35px;
+  background-color: v.$additional;
+  border: 1px solid transparent;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 9px;
+    mask-image: url("/__spritemap#sprite-arrow-view");
+    transform: rotate(180deg);
+    mask-repeat: no-repeat;
+    background-color: v.$white;
+  }
+}
+
+@mixin button-next {
+    position: relative;
+    display: flex;
+    justify-content: center;
+      align-items: center;
+    width: 37px;
+    height: 35px;
+    background-color: v.$additional;
+    border: 1px solid transparent;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 14px;
+      height: 9px;
+      mask-image: url("/__spritemap#sprite-arrow-view");
+      mask-repeat: no-repeat;
+      background-color: v.$white;
+    }
 }
