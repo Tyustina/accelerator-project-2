@@ -1,14 +1,56 @@
 @use "../global/variables.scss" as v;
 @use "../global/mixin.scss" as m;
+
 .contacts {
+  padding-top: 36px;
+  margin-bottom: 20px;
+
+  @include m.tablet {
+    padding-bottom: 60px;
+    padding-bottom: 40px;
+  }
+}
+
+.contacts__container {
   @include m.container;
+  margin-bottom: 30px;
+
+  @include m.tablet {
+    margin-bottom: 40px;
+  }
+
+  @include m.desktop {
+    margin-bottom: 0;
+  }
+}
+
+.contacts__title {
+  position: relative;
+  margin-bottom: 29px;
+}
+
+.contacts__title::before {
+  @include m.title-shadow;
+  content: "Контакты"
+}
+
+.contacts p:not(.contacts__list p) {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  margin-bottom: 30px;
+
+  @include m.tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .contacts__list {
   @include m.list-reset;
   display: grid;
   gap: 30px;
-  margin-top: 30px;
 }
 
 .contacts__item {
@@ -67,4 +109,14 @@
 .contacts__link {
   text-decoration: none;
   color: v.$primary;
+}
+
+.contacts__map {
+  width: 100vw;
+  min-height: 343px;
+  object-fit: cover;
+
+  @include m.tablet {
+    min-height: 340px;
+  }
 }
