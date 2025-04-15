@@ -1,0 +1,50 @@
+@use "../global/variables.scss" as v;
+@use "../global/mixin.scss" as m;
+
+.socials {
+  @include m.list-reset;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 23px;
+}
+
+.socials__item {
+  display: flex;
+  justify-content: center;
+    align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid v.$primary20;
+  background-color: transparent;
+}
+
+.socials__link--vk {
+  content: "";
+  width: 16px;
+  height: 9px;
+  mask-image: url("/__spritemap#sprite-vk-view");
+  mask-repeat: no-repeat;
+  mask-position: cover;
+  background-color: v.$primary;
+}
+
+.socials__link--ok {
+  content: "";
+  width: 9px;
+  height: 16px;
+  mask-image: url("/__spritemap#sprite-ok-view");
+  mask-repeat: no-repeat;
+  mask-position: cover;
+  background-color: v.$primary;
+}
+
+.socials__link--reddit {
+  content: "";
+  width: 14px;
+  height: 15px;
+  mask-image: url("/__spritemap#sprite-reddit-view");
+  mask-repeat: no-repeat;
+  mask-position: cover;
+  background-color: v.$primary;
+}

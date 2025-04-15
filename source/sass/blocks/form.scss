@@ -40,7 +40,6 @@
 }
 
 .form__container {
-  @include m.container;
   display: grid;
   grid-template-columns: 258px;
   justify-content: center;

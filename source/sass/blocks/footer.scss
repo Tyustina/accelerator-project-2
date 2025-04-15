@@ -1,0 +1,73 @@
+@use "../global/variables.scss" as v;
+@use "../global/mixin.scss" as m;
+
+.footer {
+  @include m.container;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  margin-bottom: 23px;
+}
+.footer__logo {
+  width: 142px;
+  height: 42px;
+  color: v.$primary;
+  align-self: center;
+}
+
+.footer__list {
+  @include m.list-reset;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 15px;
+}
+
+.footer__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__item:first-child,
+.footer__item:nth-child(2),
+.footer__item:nth-child(3) {
+  grid-column: 1/2;
+}
+
+.footer__item:nth-child(4),
+.footer__item:nth-child(5),
+.footer__item:nth-child(6){
+  grid-column: 2/-1;
+}
+
+.footer__item:first-child,
+.footer__item:nth-child(4) {
+  grid-row: 1/2;
+}
+
+.footer__item:nth-child(2),
+.footer__item:nth-child(5) {
+  grid-row: 2/3;
+}
+
+.footer__link {
+  display: none;
+
+  @include m.desktop {
+    font-weight: 600;
+    color: v.$primary;
+    text-align: right;
+    text-decoration: none;
+  }
+}
+
+.footer__conf {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 100%;
+  margin: 0;
+  text-align: center;
+}

@@ -1,0 +1,11 @@
+@use "../global/variables.scss" as v;
+@use "../global/mixin.scss" as m;
+
+.gallery__title {
+  position: relative;
+}
+
+.gallery__title::before{
+  @include m.title-shadow;
+  content: "Фотогалерея";
+}
