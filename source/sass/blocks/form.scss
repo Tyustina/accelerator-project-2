@@ -1,0 +1,59 @@
+@use "../global/variables.scss" as v;
+@use "../global/mixin.scss" as m;
+
+.form {
+  display: grid;
+  gap: 20px;
+  padding: 174px 31px;
+  color: v.$white;
+  background-color: v.$additional;
+  background-image:
+    image-set(url("../../img/form-bg.webp") 1x type("image/webp"),
+      url("../../img/form-bg@2x.webp") 2x type("image/webp"),
+      url("../../img//form-bg.jpg") 1x type("image/jpeg"),
+      url("../../img/form-bg@2x.jpg") 2x type("image/jpeg"));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.form__text-wrapper {
+  display: grid;
+  grid-template-columns: 258px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.form__text-wrapper  h2 {
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 100%;
+  text-align: center;
+}
+
+.form__text-wrapper  p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  margin: 0;
+}
+
+.form__container {
+  @include m.container;
+  display: grid;
+  grid-template-columns: 258px;
+  justify-content: center;
+  gap: 8px;
+}
+
+.form__input {
+  width: 100%;
+  padding: 17px 16px;
+  border-radius: 2px;
+  border: transparent;
+}
+
+.form__button {
+  width: 100%;
+}

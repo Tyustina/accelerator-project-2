@@ -1,0 +1,197 @@
+@use "../global/variables.scss" as v;
+@use "../global/mixin.scss" as m;
+
+.adv {
+  @include m.container;
+  padding-top: 36px;
+  padding-bottom: 20px;
+
+  @include m.tablet {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.adv__title {
+  position: relative;
+  margin-bottom: 37px;
+  text-align: center;
+  @include m.tablet {
+    margin-bottom: 50px;
+  }
+}
+
+.adv__title::before {
+  @include m.title-shadow;
+  content: "Преимущества";
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.adv .swiper-wrapper {
+  @include m.list-reset;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 15px;
+  @include m.tablet {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  @include m.desktop {
+    flex-wrap: nowrap;
+  }
+}
+
+.adv .swiper-slide{
+  position: relative;
+  border: 1px solid v.$additional20;
+  padding: 62px 10px 20px 10px;
+
+  @include m.tablet {
+    width: 324px;
+    min-height: 340px;
+    padding: 73px 20px 30px 20px;
+  }
+}
+
+.adv__item::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 42px;
+  height: 42px;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid v.$additional;
+  background-color: transparent;
+
+  @include m.tablet {
+    top: 30px;
+  }
+}
+
+.adv__item--safety::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  mask-image: url("/__spritemap#sprite-safety-view");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  background-color: v.$additional;
+  @include m.tablet {
+    top: 38px;
+  }
+}
+
+.adv__item--expertise::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  mask-image: url("/__spritemap#sprite-expertise-view");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  background-color: v.$additional;
+
+  @include m.tablet {
+    top: 38px;
+  }
+}
+
+.adv__item--eqipment::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  mask-image: url("/__spritemap#sprite-eqip-view");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  background-color: v.$additional;
+
+  @include m.tablet {
+    top: 38px;
+  }
+}
+
+.adv__item--route::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  mask-image: url("/__spritemap#sprite-route-view");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  background-color: v.$additional;
+
+  @include m.tablet {
+    top: 38px;
+  }
+}
+
+.adv__item--care::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  mask-image: url("/__spritemap#sprite-care-view");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  background-color: v.$additional;
+
+  @include m.tablet {
+    top: 38px;
+  }
+}
+
+.adv__item h3 {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  text-align: center;
+  @include m.tablet {
+    font-size: 16px;
+  }
+}
+
+.adv__item p {
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  @include m.tablet {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.adv__buttons {
+  display: none;
+
+  @include m.desktop {
+    display: flex;
+  }
+}

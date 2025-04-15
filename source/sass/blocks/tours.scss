@@ -101,27 +101,6 @@
   background-repeat: no-repeat;
 }
 
-.tours__buttons {
-  display: none;
-
-  @include m.tablet {
-    // position: absolute;
-    display: flex;
-    flex-direction: row;
-    gap: 4px;
-    top: 0;
-    right: 0;
-  }
-}
-
-.tours__button--next {
-  @include m.button-next;
-}
-
-.tours__button--prev {
-  @include m.button-prev;
-}
-
 .tours__link {
   position: relative;
   display: flex;

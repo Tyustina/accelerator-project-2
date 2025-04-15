@@ -52,26 +52,6 @@
   background-repeat: no-repeat;
 }
 
-.reviews__buttons {
-  display: none;
-
-  @include m.tablet {
-    // position: absolute;
-    display: flex;
-    flex-direction: row;
-    gap: 4px;
-    top: 0;
-    right: 0;
-  }
-}
-.reviews__button--next {
-  @include m.button-next;
-}
-
-.reviews__button--prev  {
-  @include m.button-prev;
-}
-
 .reviews-card__name {
   font-weight: 700;
   font-size: 13px;

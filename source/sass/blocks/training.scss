@@ -114,23 +114,3 @@
   mask-size: cover;
   background-color: v.$primary;
 }
-
-.training__buttons {
-  display: none;
-
-  @include m.tablet {
-    // position: absolute;
-    display: flex;
-    flex-direction: row;
-    gap: 4px;
-    top: 0;
-    right: 0;
-  }
-}
-.training-card__button--next {
-  @include m.button-next;
-}
-
-.training-card__button--prev {
-  @include m.button-prev;
-}

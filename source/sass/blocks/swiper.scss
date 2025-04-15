@@ -1,0 +1,59 @@
+@use "../global/variables.scss" as v;
+@use "../global/mixin.scss" as m;
+
+.swiper-buttons {
+  display: none;
+
+  @include m.tablet {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    top: 0;
+    right: 0;
+  }
+}
+
+.swiper-button-next {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 37px;
+  height: 35px;
+  background-color: v.$additional;
+  border: 1px solid transparent;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 9px;
+    mask-image: url("/__spritemap#sprite-arrow-view");
+    mask-repeat: no-repeat;
+    background-color: v.$white;
+  }
+}
+
+.swiper-button-prev {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 37px;
+  height: 35px;
+  background-color: v.$additional;
+  border: 1px solid transparent;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 9px;
+    mask-image: url("/__spritemap#sprite-arrow-view");
+    transform: rotate(180deg);
+    mask-repeat: no-repeat;
+    background-color: v.$white;
+  }
+}
+
+.swiper-button-disabled {
+  background-color: v.$disabled;
+}
