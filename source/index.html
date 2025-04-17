@@ -43,7 +43,14 @@
       <h2 class="visually-hidden">Лучшие туры</h2>
       <div class="hero__swiper main-slider swiper">
         <ul class="main-slider__list swiper-wrapper">
-          <li class="main-slider__item main-slider__item--caucasus swiper-slide">
+          <li class="main-slider__item swiper-slide">
+            <picture>
+              <source type="image/webp" media="(min-width:1440px)" srcset="./img/bg-caucasus-big.webp 1x, ./img/bg-caucasus-big@2x.webp" width="1440" height="800">
+              <source type="image/jpeg" media="(min-width:1440px)" srcset="./img/bg-caucasus-big.jpg 1x, ./img/bg-caucasus-big@2x.jpg" width="1440" height="800">
+              <source type="image/webp" srcset="./img/bg-caucasus.webp 1x, ./img/bg-caucasus@2x.webp 2x" width="768" height="1034">
+              <img class="main-slider__img" src="./img/bg-caucasus.jpg" srcset="./img/bg-caucasus@2x.jpg" width="768" height="1034" alt="Вершины Кавказа.">
+            </picture>
+            <div class="main-slider__wrapper">
             <div>
               <h3>Захватывающие вершины Кавказа</h3>
               <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход
@@ -52,11 +59,19 @@
               <a class="main-slider__link button" href="#">Смотреть тур</a>
             </div>
             <div class="main-slider__info">
-              <p class="main-slider__info-time">6 дней/5 ночей</p>
-              <p class="main-slider__info-level">Высокая сложность</p>
+              <span class="main-slider__info-block main-slider__info-block--time">6 дней/5 ночей</span>
+              <span class="main-slider__info-block main-slider__info-block--level">Высокая сложность</span>
             </div>
+          </div>
           </li>
-          <li class="main-slider__item main-slider__item--kamchatka swiper-slide">
+          <li class="main-slider__item swiper-slide">
+            <picture>
+              <source type="image/webp" media="(min-width:1440px)" srcset="./img/bg-kamchatka-big.webp 1x, ./img/bg-kamchatka-big@2x.webp" width="1440" height="800">
+              <source type="image/jpeg" media="(min-width:1440px)" srcset="./img/bg-kamchatka-big.jpg 1x, ./img/bg-kamchatka-big@2x.jpg" width="1440" height="800">
+              <source type="image/webp" srcset="./img/bg-kamchatka.webp 1x, ./img/bg-kamchatka@2x.webp 2x" width="768" height="1034">
+              <img class="main-slider__img" src="./img/bg-kamchatka.jpg" srcset="./img/bg-kamchatka@2x.jpg" width="768" height="1034" alt="Природа Камчатки.">
+            </picture>
+            <div class="main-slider__wrapper">
             <div>
               <h3>Невероятная природа Камчатки</h3>
               <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых нетронутых
@@ -64,11 +79,19 @@
               <a class="main-slider__link  button" href="#">Смотреть тур</a>
             </div>
             <div class="main-slider__info">
-              <p class="main-slider__info-time">9 дней/10 ночей</p>
-              <p class="main-slider__info-level">Средняя сложность</p>
+              <span class="main-slider__info-block main-slider__info-block--time">9 дней/10 ночей</span>
+              <span class="main-slider__info-block main-slider__info-block--level">Средняя сложность</span>
+            </div>
             </div>
           </li>
-          <li class="main-slider__item main-slider__item--altay swiper-slide">
+          <li class="main-slider__item swiper-slide">
+            <picture>
+              <source type="image/webp" media="(min-width:1440px)" srcset="./img/bg-altay-big.webp 1x, ./img/bg-altay-big@2x.webp" width="1440" height="800">
+              <source type="image/jpeg" media="(min-width:1440px)" srcset="./img/bg-altay-big.jpg 1x, ./img/bg-altay-big@2x.jpg" width="1440" height="800">
+              <source type="image/webp" srcset="./img/bg-altay.webp 1x, ./img/bg-altay@2x.webp 2x" width="768" height="1034">
+              <img class="main-slider__img" src="./img/bg-altay.jpg" srcset="./img/bg-altay@2x.jpg" width="768" height="1034" alt="Пейзаж Алтайского края.">
+            </picture>
+            <div class="main-slider__wrapper">
             <div>
               <h3>Магические пейзажи Алтайского Края</h3>
               <p>Алтайский трекинг-тур — это захватывающее приключение с посещением магических и захватывающих дух
@@ -76,8 +99,9 @@
               <a class="main-slider__link button" href="#">Смотреть тур</a>
             </div>
             <div class="main-slider__info">
-              <p class="main-slider__info-time">8 дней/7 ночей</p>
-              <p class="main-slider__info-level">Лёгкая сложность</p>
+              <span class="main-slider__info-block main-slider__info-block--time">8 дней/7 ночей</span>
+              <span class="main-slider__info-block main-slider__info-block--level">Лёгкая сложность</span>
+            </div>
             </div>
           </li>
         </ul>

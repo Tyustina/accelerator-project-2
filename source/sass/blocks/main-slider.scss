@@ -1,13 +1,27 @@
 @use "../global/variables.scss" as v;
 @use "../global/mixin.scss" as m;
+.main-slider__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  margin-bottom: 17px;
+  @include m.tablet {
+    margin-bottom: 60px;
+  }
 
+  @include m.desktop {
+    gap: 134px;
+    margin-bottom: 14px;
+  }
+}
 .main-slider__list {
   @include m.list-reset;
 }
 
 .main-slider .swiper-slide {
   display: grid;
-  align-items: center;
+  align-items: start;
   justify-items: center;
   min-height: 568px;
   transform: none;
@@ -17,61 +31,29 @@
   }
 
   @include m.desktop {
-    min-height: 800px
+    min-height: 800px;
+    align-items: center;
   }
 }
 
 .main-slider__item {
+  position: relative;
   @include m.container;
   background-color: v.$primary;
+  overflow: hidden;
 }
 
-
-.main-slider__item--caucasus {
-  background-image:
-    image-set(url("../../img/bg-caucasus.webp") 1x type("image/webp"),
-    url("../../img//bg-caucasus@2x.webp") 2x type("image/webp"),
-    url("../../img/bg-caucasus.jpg") 1x type("image/jpeg"),
-    url("../../img/bg-caucasus@2x.jpg") 2x type("image/jpeg"));
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: -51px 0;
-  transform: background-position 0.3s ease ;
+.main-slider__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: 0;
+  width: 100vw;
+  height: 100%;
 
   @media (min-width: 360px) {
-    background-position: bottom center;
-  }
-
-  @include m.desktop {
-    background-image:
-    image-set(url("../../img/bg-caucasus-big.webp") 1x type("image/webp"),
-    url("../../img//bg-caucasus-big@2x.webp") 2x type("image/webp"),
-    url("../../img/bg-caucasus-bi.jpg") 1x type("image/jpeg"),
-    url("../../img/bg-caucasus-bi@2x.jpg") 2x type("image/jpeg"));
-  }
-}
-
-.main-slider__item--kamchatka {
-  background-image:
-    image-set(url("../../img/bg-kamchatka.webp") 1x type("image/webp"),
-    url("../../img//bg-kamchatka@2x.webp") 2x type("image/webp"),
-    url("../../img/bg-kamchatka.jpg") 1x type("image/jpeg"),
-    url("../../img/bg-kamchatka@2x.jpg") 2x type("image/jpeg"));
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: -51px 0;
-  transform: background-position 0.3s ease ;
-
-  @media (min-width: 360px) {
-    background-position: bottom center;
-  }
-
-  @include m.desktop {
-    background-image:
-    image-set(url("../../img/bg-kamchatka-big.webp") 1x type("image/webp"),
-    url("../../img//bg-kamchatka-big@2x.webp") 2x type("image/webp"),
-    url("../../img/bg-kamchatka-bi.jpg") 1x type("image/jpeg"),
-    url("../../img/bg-kamchatka-bi@2x.jpg") 2x type("image/jpeg"));
+    object-position: bottom center;
   }
 }
 
@@ -104,7 +86,12 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 17px;
+
+  @include m.desktop {
+    width: 80%;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
 }
 
 .main-slider__item h3 {
@@ -118,10 +105,13 @@
 
   @include m.tablet {
     font-size: 56px;
+    margin-bottom: 13px;
   }
 
   @include m.desktop {
     font-size: 77px;
+    text-align: left;
+    margin-bottom: 25px;
   }
 }
 
@@ -136,7 +126,14 @@
   @include m.tablet {
     font-size: 17px;
     line-height: 24px;
-    padding: 0 80px;
+    padding: 0 102px;
+    margin-bottom: 35px;
+  }
+
+  @include m.desktop {
+    width: 45%;
+    text-align: left;
+    padding: 0;
   }
 }
 
@@ -148,19 +145,51 @@
   display: none;
 
   @include m.desktop {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    width: max-content;
+    display: grid;
+    grid-template-columns: max-content max-content;
     gap: 10px;
   }
 }
 
-.main-slider__info p {
+.main-slider__info-block {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
   font-size: 12px;
-  line-height: 133%;
+  line-height: 16px;
   padding: 14px 20px 14px 40px;
   border: 1px solid v.$white;
   color: v.$white;
+}
+
+.main-slider__info-block--time::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  mask-image: url("/__spritemap#sprite-moon-view");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  background-color: v.$white;
+}
+.main-slider__info-block--level::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  mask-image: url("/__spritemap#sprite-level-view");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  background-color: v.$white;
 }
 
 .main-slider .swiper-pagination {
@@ -170,9 +199,15 @@
   flex-wrap: wrap;
   gap: 20px;
   bottom: 40px;
-  left: 50%;
+  right: 22.5%;
   transform: translateX(-50%);
   z-index: 10;
+
+  @include m.desktop {
+    bottom: 93px;
+    right: 120px;
+    transform: none;
+  }
 }
 
 .main-slider__bullet {
@@ -181,6 +216,11 @@
   border-radius: 100%;
   background-color: transparent;
   border: 1px solid v.$white;
+
+  @include m.tablet {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .main-slider__bullet--active {

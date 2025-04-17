@@ -2,9 +2,27 @@
 @use "../global/mixin.scss" as m;
 
 .tours {
+  position: relative;
   @include m.container;
   padding-top: 36px;
   padding-bottom: 30px;
+  overflow: hidden;
+}
+
+.tours::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  min-height: 595px;
+  background-image: url("../../img/clouds-1.png");
+  background-repeat: no-repeat;
+  background-position:  bottom center;
+  background-size: cover;
+  z-index: -1;
+  outline: 1px solid red;
+  top: 38%;
+  left: 58%;
 }
 
 .tours .swiper {

@@ -2,6 +2,7 @@
 @use "../global/mixin.scss" as m;
 
 .training {
+  // position: relative;
   @include m.container;
   padding-top: 36px;
 }
