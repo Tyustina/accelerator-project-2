@@ -5,6 +5,7 @@
   display: none;
 
   @include m.tablet {
+    position: absolute;
     display: flex;
     flex-direction: row;
     gap: 4px;

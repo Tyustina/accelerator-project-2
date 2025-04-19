@@ -2,36 +2,36 @@
 @use "../global/mixin.scss" as m;
 
 .tours {
-  position: relative;
   @include m.container;
-  padding-top: 36px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 38px;
   padding-bottom: 30px;
-  overflow: hidden;
+
+  @include m.tablet {
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+
+  @include m.desktop {
+    padding-top: 123px;
+  }
 }
 
-.tours::after {
-  position: absolute;
-  display: block;
-  content: "";
-  width: 100%;
-  min-height: 595px;
-  background-image: url("../../img/clouds-1.png");
-  background-repeat: no-repeat;
-  background-position:  bottom center;
-  background-size: cover;
-  z-index: -1;
-  outline: 1px solid red;
-  top: 38%;
-  left: 58%;
-}
-
-.tours .swiper {
-  display: grid;
-  padding: 60px 0;
-}
-
-.tours__swiper .swiper-wrapper {
+.tours__swiper {
   position: relative;
+  padding-top: 40px;
+  overflow: hidden;
+
+  @include m.tablet {
+    top: -25px;
+    padding-top: 60px;
+  }
+
+  @include m.desktop {
+    top: -38px;
+    padding-top: 88px;
+  }
 }
 
 .tours__title {
@@ -48,19 +48,11 @@
 }
 
 .tours .swiper-slide {
+  width: 290px;
+  position: relative;
   display: flex;
   align-items: flex-end;
   min-height: 416px;
-}
-
-.card__text-content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 15px;
-  padding: 0 20px 30px 20px;
-  color: v.$white;
 }
 
 .tours .swiper-slide::before {
@@ -70,8 +62,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.6) 100%);
-  z-index: -1;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 22.3%, rgba(0, 0, 0, 0) 60.32%);
+  z-index: 1;
 }
 
 .tours__item--elbrus {
@@ -81,9 +73,20 @@
       url("../../img/tours-elbrus@2x.webp") 2x type("image/webp"),
       url("../../img/tours-elbrus.jpg") 1x type("image/jpeg"),
       url("../../img/tours-elbrus@2x.jpg") 2x type("image/jpeg"));
-  background-size: cover;
+  background-size: 135%;
+  background-position: -51px -3px;
   background-repeat: no-repeat;
   z-index: 2;
+
+  @include m.tablet {
+    background-size: 116%;
+    background-position: -28px -1px;
+  }
+
+  @include m.desktop {
+    background-size: cover;
+    background-position: 0 0;
+  }
 }
 
 .tours__item--beluha {
@@ -93,8 +96,19 @@
       url("../../img/tours-beluha@2x.webp") 2x type("image/webp"),
       url("../../img/tours-beluha.jpg") 1x type("image/jpeg"),
       url("../../img/tours-beluha@2x.jpg") 2x type("image/jpeg"));
-  background-size: cover;
+  background-size: 135%;
+  background-position: -51px -3px;
   background-repeat: no-repeat;
+
+  @include m.tablet {
+    background-size: 115%;
+    background-position: -26px 0px;
+  }
+
+  @include m.desktop {
+    background-size: cover;
+    background-position: 0 0;
+  }
 }
 
 .tours__item--fisht {
@@ -131,7 +145,18 @@
   text-transform: uppercase;
   color: v.$primary;
   text-decoration: none;
-  margin-top: 5px;
+  align-self: center;
+  margin-top: 35px;
+
+  @include m.tablet {
+    margin-top: 10px;
+    font-size: 16px;
+    gap: 10px;
+  }
+
+  @include m.desktop {
+    margin-top: 25px;
+  }
 }
 
 .tours__link::after {

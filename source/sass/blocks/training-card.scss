@@ -4,11 +4,17 @@
 .training-card {
   position: relative;
   border: 1px solid v.$additional20;
-  padding: 15px;
+  padding: 14px;
 
   @include m.tablet {
     min-height: 388px;
   }
+}
+.training-card__text-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .training-card__link {
@@ -19,8 +25,8 @@
   width: 24px;
   height: 24px;
   border: 1px solid v.$primary30;
-  top: 230px;
-  right: 15px;
+  top: -1px;
+  right: 0;
 }
 
 .training-card__link-icon {
@@ -30,6 +36,8 @@
 
 .training-card__img {
   display: block;
+  width: 260px;
+  height: 200px;
   @include m.tablet {
     width: 182px;
     height: 200px;

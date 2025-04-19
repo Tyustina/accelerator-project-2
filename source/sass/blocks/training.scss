@@ -2,11 +2,25 @@
 @use "../global/mixin.scss" as m;
 
 .training {
-  // position: relative;
   @include m.container;
   padding-top: 36px;
-}
+  padding-bottom: 20px;
 
+  @include m.tablet {
+    padding-top: 60px;
+  }
+}
+.training__swiper {
+  position: relative;
+  overflow: hidden;
+  padding-top: 9px;
+  padding-bottom: 11px;
+
+  @include m.tablet {
+    padding-top: 51px;
+    top: -28px;
+  }
+}
 .training .swiper-wrapper {
   padding: 0;
 }
@@ -15,12 +29,12 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 16px;
 }
 
 .training__main-title {
   position: relative;
-  margin-bottom: 35px;
+  margin-bottom: 34px;
 }
 
 .training__main-title::before {
@@ -29,12 +43,17 @@
 }
 
 .training__text {
-  margin-bottom: 25px;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 28px;
+
+  @include m.tablet {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
 }
 
-.training__process {
-  @include m.container
-}
 
 .training__subtitle {
   margin-bottom: 25px;
@@ -42,22 +61,63 @@
 
 .training__list {
   @include m.list-reset;
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 25px;
-  border-left: 2px solid v.$additional;
-  padding-left: 15px;
+  padding-left: 21px;
+  margin-left: 6px;
+
+  @include m.tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    column-gap: 174px;
+    row-gap: 104px;
+  }
+}
+.training__list::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 2px;
+  height: 90%;
+  background-color: v.$additional;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @include m.tablet {
+    display: none;
+  }
 }
 
 .training__item {
   position: relative;
   display: flex;
   flex-direction: row;
-  width: 82%;
+  width: 88%;
   font-size: 12px;
   line-height: 18px;
-  padding-left: 40px;
+  padding-left: 34px;
 }
+.training__item::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  background-color: v.$additional;
+  left: -12%;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @include m.tablet {
+    display: none;
+  }
+}
+
 
 .training__item--drive::before {
   position: absolute;

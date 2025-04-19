@@ -34,9 +34,26 @@ html {
 }
 
 .main {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  overflow: hidden;
+}
+
+.main::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  min-height: 595px;
+  background-image: url("../../img/clouds-1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+  top: 660px;
+  left: 58%;
 }
 
 *,

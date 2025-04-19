@@ -6,6 +6,7 @@
   flex-direction: column;
   z-index: 1;
   margin-bottom: 17px;
+  z-index: 2;
   @include m.tablet {
     margin-bottom: 60px;
   }
@@ -43,6 +44,17 @@
   overflow: hidden;
 }
 
+.main-slider__item::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(112.1deg, rgba(15, 20, 41, 0.33) 17.23%, rgba(15, 20, 41, 0) 94.93%);
+  z-index: 1;
+}
+
 .main-slider__img {
   position: absolute;
   top: 0;
@@ -57,29 +69,7 @@
   }
 }
 
-.main-slider__item--altay {
-  background-image:
-    image-set(url("../../img/bg-altay.webp") 1x type("image/webp"),
-    url("../../img//bg-altay@2x.webp") 2x type("image/webp"),
-    url("../../img/bg-altay.jpg") 1x type("image/jpeg"),
-    url("../../img/bg-altay@2x.jpg") 2x type("image/jpeg"));
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: -51px 0;
-  transform: background-position 0.3s ease ;
 
-  @media (min-width: 360px) {
-    background-position: bottom center;
-  }
-
-  @include m.desktop {
-    background-image:
-    image-set(url("../../img/bg-altay-big.webp") 1x type("image/webp"),
-    url("../../img//bg-altay-big@2x.webp") 2x type("image/webp"),
-    url("../../img/bg-altay-bi.jpg") 1x type("image/jpeg"),
-    url("../../img/bg-altay-bi@2x.jpg") 2x type("image/jpeg"));
-  }
-}
 
 .main-slider__item div:first-child{
   display: flex;
