@@ -9,17 +9,18 @@
     position: relative;
     display: grid;
     grid-template-columns: 1fr 270px;
-    padding: 40px 48px;
+    padding: 60px 48px 42px 48px;
   }
 
   @include m.desktop {
-    padding: 100px 120px 178px 120px;
+    padding: 145px 120px 180px 120px;
     grid-template-columns: 1fr 660px;
   }
 }
 
 .about__container {
   @include m.container;
+  padding-top: 16px;
 
   @include m.tablet {
     grid-column: 2/-1;
@@ -33,32 +34,33 @@
   position: relative;
   content: "";
   display: block;
-  width: 100%;
-  min-height: 400px;
-  height: fit-content;
+  width: 840px;
+  height: 400px;
   background-image:
     image-set(url("../../img/about.webp") 1x type("image/webp"),
       url("../../img/about@2x.webp") 2x type("image/webp"),
       url("../../img/about.jpg") 1x type("image/jpeg"),
       url("../../img/about@2x.jpg") 2x type("image/jpeg"));
-  background-size: cover;
-  background-position: bottom center;
+  background-size: 77%;
+  background-position: -82px -22px;
   background-repeat: no-repeat;
 
   @include m.tablet {
     position: absolute;
-    width: 542px;
-    height: 350px;
-    background-size: contain;
+    // width: 660px;
+    // height: 498px;
+    background-size: 69%;
     z-index: -1;
-    background-position: center left;
-    top: 50%;
-    transform: translateY(-50%);
+    background-position: -21px 5px;
+    top: 27%;
   }
 
   @include m.desktop {
-    width: 660px;
+    width: 840px;
     height: 498px;
+    background-size: cover;
+    background-position: -90px -39px;
+    top: 20%;
   }
 }
 
@@ -67,11 +69,28 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
+
+  @include m.tablet {
+    gap: 29px;
+  }
+
+  @include m.desktop {
+    width: 90%;
+  }
 }
 
 .about__title {
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 42px;
+
+  @include m.tablet {
+    margin-bottom: 48px;
+  }
+
+  @include m.desktop {
+    margin-bottom: 59px;
+  }
+
 }
 
 .about__title::before {
@@ -81,4 +100,31 @@
 
 .about__subtitle {
   margin-bottom: 15px;
+
+  @include m.tablet {
+    font-size: 18px;
+    margin-bottom: 11px;
+  }
+
+  @include m.desktop {
+    font-size: 21px;
+    margin-bottom: 16px;
+  }
+}
+
+.about__text {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 28px;
+  margin: 0;
+
+  @include m.tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @include m.desktop {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
