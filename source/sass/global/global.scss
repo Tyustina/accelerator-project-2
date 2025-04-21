@@ -45,15 +45,30 @@ html {
   position: absolute;
   display: block;
   content: "";
-  width: 100%;
-  min-height: 595px;
+  width: 1183px;
+  height: 798px;
   background-image: url("../../img/clouds-1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   z-index: -1;
-  top: 660px;
-  left: 58%;
+  top: 578px;
+  left: 56%;
+
+  @include m.tablet {
+    width: 100%;
+    min-height: 1630px;
+    background-position: center;
+    background-size: contain;
+    top: 14%;
+    left: 37%;
+  }
+
+  @include m.desktop {
+    background-image: url("../../img/clouds-1-big.png");
+    top: 661px;
+    left: 68%;
+  }
 }
 
 *,

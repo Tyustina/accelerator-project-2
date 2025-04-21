@@ -24,10 +24,10 @@
     padding-bottom: 20px;
   }
   @include m.desktop {
-    grid-template-columns: 205px 1fr 205px;
+    grid-template-columns: 205px 1fr max-content;
     gap: 30px;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 42px;
+    padding-bottom: 42px;
   }
 }
 
@@ -46,6 +46,7 @@
 
   @include m.desktop {
     grid-column: 1/2;
+    margin-left: 1px;
   }
 }
 
@@ -65,6 +66,7 @@
   @include m.desktop {
     grid-column: 3/-1;
     font-size: 18px;
+    margin-top: 3px;
   }
 
 
