@@ -9,6 +9,10 @@
   @include m.tablet {
     min-height: 388px;
   }
+
+  @include m.desktop {
+    min-height: 356px;
+  }
 }
 .training-card__text-container {
   position: relative;
@@ -38,10 +42,10 @@
   display: block;
   width: 260px;
   height: 200px;
+  object-fit: cover;
   @include m.tablet {
     width: 182px;
     height: 200px;
-    object-fit: cover;
   }
 
   @include m.desktop {
@@ -51,7 +55,7 @@
 }
 
 .training-card h3 {
-  width: 60%;
+  width: 57%;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;

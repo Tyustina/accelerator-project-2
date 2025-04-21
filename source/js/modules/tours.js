@@ -10,12 +10,12 @@ new Swiper('.tours__swiper', {
     nextEl: '.tours__button--next',
     prevEl: '.tours__button--prev',
   },
-  spaceBetween: 18,
   slidesPerView: 1,
   slidesPerGroup: 1,
   updateOnWindowResize: true,
   breakpoints: {
     768: {
+      spaceBetween: 18,
       slidesPerView: 2,
     },
     1440: {

@@ -56,7 +56,6 @@ html {
   left: 56%;
 
   @include m.tablet {
-    width: 100%;
     min-height: 1630px;
     background-position: center;
     background-size: contain;
