@@ -56,17 +56,20 @@ html {
   left: 56%;
 
   @include m.tablet {
-    min-height: 1630px;
+    width: 2042px;
+    height: 1630px;
     background-position: center;
     background-size: contain;
-    top: 14%;
-    left: 37%;
-  }
+    top: 926px;
+    left: 45%;
+}
 
   @include m.desktop {
+    width: 2056px;
+    height: 1630px;
     background-image: url("../../img/clouds-1-big.png");
-    top: 661px;
-    left: 68%;
+    top: 676px;
+    left: 58%;
   }
 }
 

@@ -95,6 +95,7 @@
 }
 
 .card__title {
+  position: relative;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -104,6 +105,17 @@
   @include m.desktop {
     width: 90%;
   }
+}
+
+.card__title::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 80px;
+  height: 1px;
+  background-color: v.$white;
+  bottom: -15px;
+  left: 0;
 }
 
 .card__details {

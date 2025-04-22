@@ -19,6 +19,7 @@ new Swiper('.training__swiper', {
       initialSlide: 0,
     },
     1440: {
+      initialSlide: 0,
       slidesPerView: 4,
       touch: false,
       simulateTouch: false,

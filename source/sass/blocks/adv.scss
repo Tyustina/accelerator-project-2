@@ -16,6 +16,7 @@
   position: relative;
   margin-bottom: 37px;
   text-align: center;
+
   @include m.tablet {
     margin-bottom: 50px;
   }
@@ -30,12 +31,12 @@
 
 .adv .swiper-wrapper {
   @include m.list-reset;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  display: grid;
   gap: 15px;
+
   @include m.tablet {
-    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
   }
@@ -45,7 +46,7 @@
   }
 }
 
-.adv .swiper-slide{
+.adv .swiper-slide {
   position: relative;
   border: 1px solid v.$additional20;
   padding: 62px 10px 20px 10px;
@@ -87,6 +88,7 @@
   mask-repeat: no-repeat;
   mask-size: cover;
   background-color: v.$additional;
+
   @include m.tablet {
     top: 38px;
   }
@@ -173,6 +175,7 @@
   font-size: 14px;
   line-height: 100%;
   text-align: center;
+
   @include m.tablet {
     font-size: 16px;
   }
@@ -182,6 +185,7 @@
   font-size: 12px;
   line-height: 18px;
   text-align: center;
+
   @include m.tablet {
     font-size: 14px;
     line-height: 22px;
