@@ -19,6 +19,7 @@
   gap: 5px;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 1px;
 }
 
 .card__location {
@@ -151,24 +152,3 @@ justify-content: space-between;
   margin-top: -1px;
   transform: scale(1.03);
 }
-// .card__details-desk--4 {
-//   content: "";
-//   display: block;
-//   width: 84px;
-//   height: 16px;
-//   mask-image: url("/__spritemap#sprite-stars-4-view");
-//   mask-repeat: no-repeat;
-//   mask-size: cover;
-//   background-color: v.$white;
-// }
-
-// .card__details-desk--5 {
-//   content: "";
-//   display: block;
-//   width: 84px;
-//   height: 16px;
-//   mask-image: url("/__spritemap#sprite-stars-5-view");
-//   mask-repeat: no-repeat;
-//   mask-size: cover;
-//   background-color: v.$white;
-// }

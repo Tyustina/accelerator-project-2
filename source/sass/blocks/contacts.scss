@@ -3,7 +3,7 @@
 
 .contacts {
   padding-top: 36px;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 
   @include m.tablet {
     padding-bottom: 60px;
@@ -40,6 +40,7 @@
   line-height: 20px;
   margin: 0;
   margin-bottom: 30px;
+  width: 95%;
 
   @include m.tablet {
     font-size: 16px;
@@ -101,6 +102,7 @@
 }
 
 .contacts__text {
+  width: 65%;
   font-size: 14px;
   line-height: 20px;
   margin: 0;
@@ -115,6 +117,7 @@
   width: 100vw;
   min-height: 343px;
   object-fit: cover;
+  object-position: center 1px;
 
   @include m.tablet {
     min-height: 340px;

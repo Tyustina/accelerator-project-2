@@ -12,10 +12,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: min-content min-content;
-  row-gap: 14px;
+  row-gap: 16px;
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 13px;
   z-index: 10;
+  column-gap: 6px;
+
   @include m.tablet {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;

@@ -10,7 +10,7 @@ new Swiper('.reviews__swiper', {
     prevEl: '.reviews__button--prev',
   },
   spaceBetween: 120,
-  slidesPerView: 1,
+  slidesPerView: 'auto',
   slidesPerGroup: 1,
   1440: {
     touch: false,
