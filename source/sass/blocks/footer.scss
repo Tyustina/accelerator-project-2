@@ -3,13 +3,32 @@
 
 .footer {
   @include m.container;
-  padding-top: 23px;
+  padding-top: 22px;
+
+  @include m.tablet {
+    padding-top: 33px;
+  }
+
+  @include m.desktop {
+    padding-top: 41px;
+  }
 }
 
 .footer__nav {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 19px;
+
+  @include m.tablet {
+    flex-direction: row;
+    gap: 36px;
+  }
+
+  @include m.desktop {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    align-items: center;
+  }
 }
 
 .footer__logo {
@@ -17,6 +36,10 @@
   height: 42px;
   color: v.$primary;
   align-self: center;
+
+  @include m.desktop {
+    margin-left: 29px;
+  }
 }
 
 .footer__list {
@@ -25,12 +48,30 @@
   grid-template-columns: 1fr 1fr;
   row-gap: 7px;
   column-gap: 50px;
+
+  @include m.tablet {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  @include m.desktop {
+    justify-content: center;
+    gap: 19px;
+  }
 }
 
 .footer__item {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.footer__nav .nav__link {
+  @include m.desktop {
+    font-size: 16px;
+  }
 }
 
 .footer__item:first-child,
@@ -59,10 +100,9 @@
   display: none;
 
   @include m.desktop {
-    font-weight: 600;
+    display: block;
     color: v.$primary;
     text-align: right;
-    text-decoration: none;
   }
 }
 

@@ -8,6 +8,17 @@
   gap: 18px;
   margin-top: 19px;
   margin-bottom: 23px;
+
+  @include m.tablet {
+    margin-top: 35px;
+    margin-bottom: 33px;
+  }
+
+  @include m.desktop {
+    gap: 16px;
+    margin-top: 30px;
+    margin-bottom: 23px;
+  }
 }
 
 .socials__item {

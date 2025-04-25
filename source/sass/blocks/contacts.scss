@@ -4,30 +4,48 @@
 .contacts {
   padding-top: 36px;
   padding-bottom: 20px;
+  border-bottom: 1px solid v.$primary30;
 
   @include m.tablet {
-    padding-bottom: 60px;
+    padding-top: 61px;
     padding-bottom: 40px;
+  }
+
+  @include m.desktop {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 123px;
+    padding-bottom: 94px;
   }
 }
 
 .contacts__container {
   @include m.container;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
 
   @include m.tablet {
-    margin-bottom: 40px;
+    margin-bottom: 0;
+    padding-bottom: 41px;
   }
 
   @include m.desktop {
-    margin-bottom: 0;
+    padding-bottom: 0;
   }
 }
 
 .contacts__title {
   position: relative;
   margin-bottom: 29px;
+
+  @include m.tablet {
+    margin-bottom: 20px;
+  }
+
+  @include m.desktop {
+    margin-bottom: 23px;
+  }
 }
+
 
 .contacts__title::before {
   @include m.title-shadow;
@@ -43,22 +61,54 @@
   width: 95%;
 
   @include m.tablet {
+    width: 71%;
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 40px;
+  }
+
+  @include m.desktop {
+    width: 40%;
+    margin-bottom: 49px;
   }
 }
 
 .contacts__list {
   @include m.list-reset;
   display: grid;
-  gap: 30px;
+  gap: 33px;
+
+  @include m.tablet {
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    column-gap: 40px;
+    row-gap: 20px;
+  }
+
+  @include m.desktop {
+    grid-template-columns: 1fr;
+    row-gap: 33px;
+  }
 }
 
 .contacts__item {
   position: relative;
   display: grid;
-  gap: 8px;
+  gap: 11px;
   padding-left: 32px;
+
+  @include m.tablet {
+    display: flex;
+    gap: 9px;
+    flex-direction: column;
+    padding-left: 34px;
+  }
+
+  @include m.desktop {
+    padding-left: 56px;
+    gap: 10px;
+  }
+
 }
 
 .contacts__item--tel::before {
@@ -70,6 +120,20 @@
   mask-repeat: no-repeat;
   mask-position: cover;
   background-color: v.$primary;
+
+  @include m.tablet {
+    width: 24px;
+    height: 24px;
+    left: 0;
+  }
+
+  @include m.desktop {
+    width: 26px;
+    height: 26px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 .contacts__item--email::before {
@@ -81,6 +145,20 @@
   mask-repeat: no-repeat;
   mask-position: cover;
   background-color: v.$primary;
+
+  @include m.tablet {
+    width: 24px;
+    height: 24px;
+    left: 0;
+  }
+
+  @include m.desktop {
+    width: 26px;
+    height: 26px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 .contacts__item--adress::before {
@@ -92,6 +170,20 @@
   mask-repeat: no-repeat;
   mask-position: cover;
   background-color: v.$primary;
+
+  @include m.tablet {
+    width: 24px;
+    height: 24px;
+    left: 0;
+  }
+
+  @include m.desktop {
+    width: 26px;
+    height: 26px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 .contacts__heading {
@@ -99,6 +191,14 @@
   font-size: 14px;
   line-height: 100%;
   margin: 0;
+
+  @include m.tablet {
+    font-size: 16px;
+  }
+
+  @include m.desktop {
+    font-size: 18px;
+  }
 }
 
 .contacts__text {
@@ -106,20 +206,76 @@
   font-size: 14px;
   line-height: 20px;
   margin: 0;
+  margin-top: -2px;
+
+  @include m.tablet {
+    width: 100%;
+    margin-top: -3px;
+  }
+
+  @include m.desktop {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: -1px;
+  }
+
 }
 
 .contacts__link {
   text-decoration: none;
   color: v.$primary;
+
+  @include m.desktop {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.contacts__map-wrapper {
+  position: relative;
+
+  @include m.desktop {
+    padding-top: 26px;
+  }
 }
 
 .contacts__map {
-  width: 100vw;
-  min-height: 343px;
+  width: 100%;
+  height: 343px;
   object-fit: cover;
-  object-position: center 1px;
+  object-position: center;
 
   @include m.tablet {
-    min-height: 340px;
+    height: 340px;
   }
+
+  @include m.desktop {
+    width: 600px;
+    height: 324px;
+  }
+}
+
+.contacts__pin {
+  position: absolute;
+  display: block;
+  width: 28px;
+  height: 28px;
+  top: 50%;
+  left: calc(50% + 38px);
+  z-index: 10;
+
+  @include m.tablet {
+    width: 42px;
+    height: 42px;
+    top: calc(50% + 13px);
+    left: calc(50% + 1px);
+  }
+
+  @include m.desktop {
+    width: 48px;
+    height: 48px;
+    top: calc(50% + -11px);
+    left: 50%
+  }
+
 }

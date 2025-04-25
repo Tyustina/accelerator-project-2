@@ -1,0 +1,13 @@
+@use "../global/variables.scss" as v;
+@use "../global/mixin.scss" as m;
+
+.link {
+  font-weight: 600;
+  text-align: right;
+  text-decoration: none;
+  @include m.desktop {
+    font-size: 18px;
+  }
+
+
+}
