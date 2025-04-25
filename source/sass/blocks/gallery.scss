@@ -9,3 +9,31 @@
   @include m.title-shadow;
   content: "Фотогалерея";
 }
+
+.gallery .swiper-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  padding-left: 0;
+}
+
+.gallery .swiper-slide {
+  width: 159px;
+  height: 266px;
+}
+
+.gallery__img {
+  display: block;
+  width: 158px;
+  height: 266px;
+  object-fit: cover;
+}
+.gallery__item-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.gallery__item:nth-child(even) .gallery__img {
+  width: 157px;
+  height: 129px;
+}
