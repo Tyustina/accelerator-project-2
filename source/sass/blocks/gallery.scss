@@ -1,25 +1,113 @@
 @use "../global/variables.scss" as v;
 @use "../global/mixin.scss" as m;
 
+.gallery {
+  padding-top: 36px;
+
+  @include m.tablet {
+    padding-top: 60px;
+  }
+
+  @include m.desktop {
+    padding-top: 123px;
+  }
+}
+
+.gallery__text-wrapper {
+  @include m.container;
+
+}
 .gallery__title {
   position: relative;
+  padding-bottom: 27px;
+  @include m.tablet {
+    padding-bottom: 30px;
+  }
+
+  @include m.desktop {
+    padding-bottom: 24px;
+  }
 }
 
-.gallery__title::before{
+.gallery__title::before {
   @include m.title-shadow;
   content: "Фотогалерея";
+  bottom: 1.4em;
+
+  @include m.tablet {
+    bottom: 0.9em;
+  }
+
+  @include m.desktop {
+    bottom: 0.7em;
+  }
 }
 
-.gallery .swiper-wrapper {
+.gallery p {
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0;
+
+  @include m.tablet {
+    width: 65%;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  @include m.desktop {
+    width: 55%;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+}
+
+.gallery__swiper {
+  width: 320px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-top: 31px;
+
+  @include m.tablet {
+    width: 768px;
+    padding-top: 21px;
+  }
+  @include m.desktop {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 45px;
+  }
+}
+
+.gallery__swiper-container {
+  position: relative;
+}
+.gallery__swiper .swiper-wrapper {
   display: flex;
   flex-direction: row;
-  gap: 5px;
   padding-left: 0;
+  margin: 0;
+
+  @include m.desktop {
+    gap: 5px;
+  }
 }
 
 .gallery .swiper-slide {
-  width: 159px;
+  display: flex;
+  width: 158px;
   height: 266px;
+  overflow: hidden;
+
+  @include m.tablet {
+    width: 253px;
+    height: 418px;
+  }
+
+  @include m.desktop {
+    width: 284px;
+    height: 463px;
+  }
 }
 
 .gallery__img {
@@ -27,13 +115,82 @@
   width: 158px;
   height: 266px;
   object-fit: cover;
+
+  @include m.tablet {
+    width: 253px;
+    height: 418px;
+  }
+
+  @include m.desktop {
+    width: 284px;
+    height: 463px;
+  }
 }
+
 .gallery__item-wrapper {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 135px 124px;
   gap: 7px;
+
+  @include m.tablet {
+    grid-template-rows: 209px 202px;
+  }
+
+  @include m.desktop {
+   grid-template-rows: 233px 230px;
+  }
 }
-.gallery__item:nth-child(even) .gallery__img {
+
+.gallery__img--top {
   width: 157px;
-  height: 129px;
+  height: 135px;
+  object-fit: cover;
+
+  @include m.tablet {
+    width: 253px;
+    height: 205px;
+  }
+
+  @include m.desktop {
+    width: 284px;
+    height: 233px;
+  }
+}
+
+.gallery__img--low {
+  width: 157px;
+  height: 124px;
+
+  @include m.tablet {
+    width: 253px;
+    height: 205px;
+  }
+
+  @include m.desktop {
+    width: 284px;
+    height: 233px;
+  }
+
+}
+
+.gallery__img--4 {
+  object-position: center;
+}
+
+.gallery__img--5 {
+  object-position: center ;
+}
+
+.gallery__buttons {
+  display: none;
+
+  @include m.tablet {
+    display: flex;
+    right: 45px;
+    top: -35px;
+  }
+
+  @include m.desktop {
+    display: none;
+  }
 }
