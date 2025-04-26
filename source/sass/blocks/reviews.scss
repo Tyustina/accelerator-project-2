@@ -4,11 +4,29 @@
 .reviews {
   width: 320px;
   margin: 0 auto;;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 36px;
 }
 
+.reviews__title {
+  position: relative;
+  @include m.container;
+  margin-bottom: 17px;
+}
+
+.reviews__title::before {
+  @include m.title-shadow;
+  content: "Отзывы";
+  bottom: 0.3em;
+}
+
+.reviews .swiper {
+  @include m.tablet {
+    overflow: visible;
+  }
+}
 .reviews .swiper-wrapper {
-  padding: 20px;
+  padding: 15px;
+  padding-bottom: 20px;
   margin: 0;
 }
+
