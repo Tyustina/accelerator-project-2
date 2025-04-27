@@ -9,13 +9,17 @@ new Swiper('.reviews__swiper', {
     nextEl: '.reviews__button--next',
     prevEl: '.reviews__button--prev',
   },
-  spaceBetween: 120,
+  spaceBetween: 30,
   slidesPerView: 'auto',
   slidesPerGroup: 1,
-  1440: {
-    touch: false,
-    simulateTouch: false,
-    mousewheel: false,
-    keyboard: false,
+  speed: 600,
+  breakpoints: {
+    1440: {
+      spaceBetween: 120,
+      touch: false,
+      simulateTouch: false,
+      mousewheel: false,
+      keyboard: false,
+    }
   }
 });

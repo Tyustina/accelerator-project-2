@@ -5,18 +5,38 @@
   width: 320px;
   margin: 0 auto;;
   padding-top: 36px;
+
+  @include m.tablet {
+    @include m.container;
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+
+  @include m.desktop {
+    padding-top: 145px;
+  }
 }
 
 .reviews__title {
   position: relative;
   @include m.container;
   margin-bottom: 17px;
+
+  @include m.tablet {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 35px;
+  }
 }
 
 .reviews__title::before {
   @include m.title-shadow;
   content: "Отзывы";
   bottom: 0.3em;
+
+  @include m.desktop {
+    bottom: 0.6em;
+  }
 }
 
 .reviews .swiper {
@@ -28,5 +48,33 @@
   padding: 15px;
   padding-bottom: 20px;
   margin: 0;
+
+  @include m.tablet {
+    padding: 0;
+  }
+
+  @include m.desktop {
+    margin-left: 10px;
+  }
+}
+
+.reviews__swiper-wrapper {
+  @include m.tablet {
+    position: relative;
+  }
+}
+
+.reviews__buttons {
+  display: none;
+
+  @include m.tablet {
+    position: absolute;
+    display: flex;
+    top: -60px;
+  }
+
+  @include m.desktop {
+    top: -73px;
+  }
 }
 

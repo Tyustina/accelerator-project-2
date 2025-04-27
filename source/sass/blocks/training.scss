@@ -2,7 +2,6 @@
 @use "../global/mixin.scss" as m;
 
 .training {
-  outline: 1px solid red;
   @include m.container;
   padding-top: 36px;
   padding-bottom: 20px;
