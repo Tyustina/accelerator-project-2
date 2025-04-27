@@ -3,25 +3,38 @@
 
 .form {
   display: grid;
-  gap: 20px;
   padding: 174px 31px;
   color: v.$white;
   background-color: v.$additional;
   background-image:
-    image-set(url("../../img/form-bg.webp") 1x type("image/webp"),
-      url("../../img/form-bg@2x.webp") 2x type("image/webp"),
-      url("../../img//form-bg.jpg") 1x type("image/jpeg"),
-      url("../../img/form-bg@2x.jpg") 2x type("image/jpeg"));
+    image-set(url("../../img/form/form-bg.webp") 1x type("image/webp"),
+      url("../../img/form/form-bg@2x.webp") 2x type("image/webp"),
+      url("../../img/form/form-bg.jpg") 1x type("image/jpeg"),
+      url("../../img/form/form-bg.jpg") 2x type("image/jpeg"));
   background-repeat: no-repeat;
-  background-position: calc(50% - 73px) 51%;
-  background-size: auto 116%;
+  background-size: cover;
+  background-position: center;
+
+  @include m.tablet {
+    padding-top: 183px;
+    padding-bottom: 183px;
+  }
+
+  @include m.desktop {
+    padding: 292px 240px;
+  }
+
 }
+
 .form__wrapper {
   display: grid;
-  grid-template-columns: 258px;
-  justify-content: center;
   margin: 0 auto;
   margin-top: 2px;
+
+  @include m.tablet {
+margin-top: 4px;
+  }
+
 }
 
 .form__wrapper h2 {
@@ -31,6 +44,16 @@
   text-align: center;
   margin: 0;
   margin-bottom: 18px;
+
+  @include m.tablet {
+    font-size: 25px;
+    margin-bottom: 22px;
+  }
+
+  @include m.desktop {
+    font-size: 35px;
+    margin-bottom:16px;
+  }
 }
 
 .form__wrapper p {
@@ -40,6 +63,11 @@
   line-height: 18px;
   text-align: center;
   margin: 0 auto;
+
+  @include m.tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .form__container {
@@ -48,13 +76,33 @@
   justify-content: center;
   gap: 8px;
   margin-top: 20px;
+
+  @include m.tablet {
+    grid-template-columns: 360px;
+    margin-top: 25px;
+    gap: 12px;
+  }
+
+  @include m.desktop {
+    grid-template-columns: 360px 360px 180px;
+    gap: 30px;
+    margin-top: 40px;
+  }
 }
 
 .form__input {
   width: 100%;
-  padding: 17px 16px;
+  padding: 17px 15px 15px 14px;
   border-radius: 2px;
   border: 1px solid v.$additional10;
+
+  @include m.tablet {
+    padding: 20px 15px 17px 29px;
+  }
+
+  @include m.desktop {
+    padding-bottom: 19px;
+  }
 }
 
 .form__input::placeholder {
@@ -62,8 +110,13 @@
   line-height: 100%;
   color: v.$primary50;
 }
+
 .form__button {
   width: 100%;
   padding-top: 21px;
-    padding-bottom: 19px;
+  padding-bottom: 19px;
+
+  @include m.tablet {
+    padding-top: 19px;
+  }
 }
