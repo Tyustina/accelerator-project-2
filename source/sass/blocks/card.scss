@@ -10,6 +10,10 @@
   padding: 0 20px 30px 20px;
   color: v.$white;
   z-index: 2;
+
+  // @include m.tablet {
+  //   gap: 15.5px
+  // }
 }
 
 .card__info {
@@ -35,6 +39,9 @@
   margin: 0;
   text-align: center;
 
+  @include m.tablet {
+    padding-right: 13px;
+  }
 }
 
 .card__location::before {
@@ -49,6 +56,10 @@
   mask-size: cover;
   mask-position: center;
   background-color: v.$white;
+
+  @include m.tablet {
+    left: 15.5px;
+  }
 }
 
 .card__period {
@@ -74,7 +85,7 @@
   width: 20px;
   height: 20px;
   left: 0;
-  top: 0;
+  top: 1px;
   mask-image: url("/__spritemap#sprite-sun-view");
   mask-repeat: no-repeat;
   mask-size: cover;
@@ -85,10 +96,10 @@
   position: absolute;
   content: "";
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   left: 0;
-  top: 0;
+  top: 1px;
   mask-image: url("/__spritemap#sprite-moon-view");
   mask-repeat: no-repeat;
   mask-size: cover;

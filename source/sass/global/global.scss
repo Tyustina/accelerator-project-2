@@ -13,6 +13,7 @@ body {
   background-color: v.$white;
   color: v.$primary;
   transition: overflow 0.3s ease;
+
 }
 
 .page-body__overlay {
@@ -31,6 +32,7 @@ body {
 html {
   height: 100%;
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 .main {

@@ -12,10 +12,13 @@
   }
 
   @include m.desktop {
+    width: 1440px;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 600px 600px;
+    gap: 120px;
     padding-top: 123px;
     padding-bottom: 94px;
+    margin: 0 auto;
   }
 }
 
@@ -274,8 +277,10 @@
   @include m.desktop {
     width: 48px;
     height: 48px;
-    top: calc(50% + -11px);
-    left: 50%
+    // top: calc(50% + -11px);
+    // left: 50%
+    top: 188px;
+    left: 360px;
   }
 
 }
