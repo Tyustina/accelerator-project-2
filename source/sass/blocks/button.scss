@@ -16,7 +16,7 @@
   border: 1px solid transparent;
   box-sizing: border-box;
   &:hover {
-    background-color: transparent;
+    background-color: v.$white;
     border-color: v.$blue;
     color: v.$blue;
   }

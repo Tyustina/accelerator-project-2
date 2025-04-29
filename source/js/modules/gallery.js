@@ -21,6 +21,7 @@ if (window.innerWidth < 1440 && !gallerySwiper) {
       }
     }
   });
-} else if (window.innerWidth < 1440 && gallerySwiper) {
+} else if (window.innerWidth >= 1440 && gallerySwiper) {
   gallerySwiper.destroy(true, true);
+  gallerySwiper = undefined;
 }

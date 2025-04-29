@@ -13,10 +13,9 @@ body {
   background-color: v.$white;
   color: v.$primary;
   transition: overflow 0.3s ease;
-
 }
 
-.page-body__overlay {
+.overlay {
   position: fixed;
   display: none;
   top: 0;
@@ -67,38 +66,6 @@ html {
     background-position: left calc(50vw + 118px) top -126px;
   }
 }
-
-// .main::after {
-//   position: absolute;
-//   display: block;
-//   content: "";
-//   width: 1183px;
-//   height: 798px;
-//   background-image: url("../../img/clouds-1.png");
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   background-size: cover;
-//   z-index: -1;
-//   top: 578px;
-//   left: 56%;
-
-//   @include m.tablet {
-//     width: 2042px;
-//     height: 1630px;
-//     background-position: center;
-//     background-size: contain;
-//     top: 926px;
-//     left: 45%;
-// }
-
-//   @include m.desktop {
-//     width: 2056px;
-//     height: 1630px;
-//     background-image: url("../../img/clouds-1-big.png");
-//     top: 676px;
-//     left: 58%;
-//   }
-// }
 
 *,
 *::after,
