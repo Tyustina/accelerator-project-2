@@ -2,7 +2,8 @@
 @use "../global/mixin.scss" as m;
 
 .gallery {
-  padding-top: 36px;
+  padding-top: 35px;
+  padding-bottom: 3px;
 
   @include m.tablet {
     padding-top: 60px;
@@ -17,35 +18,37 @@
 
 .gallery__text-wrapper {
   @include m.container;
+  display: grid;
+  gap: 27px;
 
-}
-.gallery__title {
-  position: relative;
-  padding-bottom: 27px;
   @include m.tablet {
-    padding-bottom: 30px;
+    gap: 30px;
   }
 
   @include m.desktop {
-    padding-bottom: 24px;
+    gap: 24px;
   }
+}
+.gallery__title {
+  position: relative;
 }
 
 .gallery__title::before {
   @include m.title-shadow;
   content: "Фотогалерея";
-  bottom: 1.4em;
+  bottom: 8px;
 
   @include m.tablet {
-    bottom: 0.9em;
+    bottom: 7px;
   }
 
   @include m.desktop {
-    bottom: 0.7em;
+    bottom: 11px;
   }
 }
 
 .gallery p {
+  font-weight: 400;
   font-size: 12px;
   line-height: 18px;
   margin: 0;
@@ -68,7 +71,7 @@
   width: 320px;
   margin: 0 auto;
   overflow: hidden;
-  padding-top: 31px;
+  padding-top: 32px;
 
   @include m.tablet {
     width: 768px;
@@ -89,7 +92,11 @@
   flex-direction: row;
   padding-left: 0;
   margin: 0;
+  gap: 3px;
 
+  @include m.tablet {
+    gap: 2px;
+  }
   @include m.desktop {
     gap: 5px;
   }
@@ -139,18 +146,18 @@
   }
 
   @include m.desktop {
-   grid-template-rows: 233px 230px;
+    grid-template-rows: 233px 230px;
   }
 }
 
 .gallery__img--top {
   width: 157px;
-  height: 135px;
+  height: 134.5px;
   object-fit: cover;
 
   @include m.tablet {
-    width: 253px;
-    height: 205px;
+    width: 252px;
+    height: 210px;
   }
 
   @include m.desktop {
@@ -161,22 +168,27 @@
 
 .gallery__img--low {
   width: 157px;
-  height: 124px;
+  height: 123.5px;
 
   @include m.tablet {
-    width: 253px;
-    height: 205px;
+    width: 252px;
+    height: 202px;
   }
 
   @include m.desktop {
     width: 284px;
-    height: 233px;
+    height: 223px;
   }
 
 }
 
 .gallery__img--4 {
+  width: 251px;
   object-position: center;
+
+  @include m.desktop{
+    width: 284px;
+  }
 }
 
 .gallery__img--5 {
@@ -195,4 +207,13 @@
   @include m.desktop {
     display: none;
   }
+}
+
+.gallery__buttons .swiper-button-next::before {
+  left: calc(50% - 5px);
+  top: calc(50% - 4px);
+}
+.gallery__buttons .swiper-button-prev::before {
+  left: calc(50% - 8px);
+  top: calc(50% - 4px);
 }

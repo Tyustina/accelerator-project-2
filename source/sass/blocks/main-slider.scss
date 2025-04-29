@@ -1,8 +1,13 @@
 @use "../global/variables.scss" as v;
 @use "../global/mixin.scss" as m;
 
-.main-slider__wrapper {
+.hero__swiper-container {
   position: relative;
+  width: 100%;
+}
+
+.main-slider__wrapper {
+  // position: relative;
   display: flex;
   flex-direction: column;
   z-index: 1;
@@ -24,6 +29,7 @@
 }
 
 .main-slider .swiper-slide {
+  width: 100%;
   display: grid;
   align-items: start;
   justify-items: center;
@@ -41,7 +47,7 @@
 }
 
 .main-slider__item {
-  position: relative;
+  // position: relative;
   @include m.container;
   background-color: v.$primary;
   overflow: hidden;

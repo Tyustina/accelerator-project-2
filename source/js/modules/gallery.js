@@ -12,7 +12,7 @@ if (window.innerWidth < 1440 && !gallerySwiper) {
       nextEl: '.gallery__button--next',
       prevEl: '.gallery__button--prev',
     },
-    spaceBetween: 5,
+    // spaceBetween: 5,
     slidesPerView: 2,
     slidesPerGroup: 1,
     breakpoints: {
