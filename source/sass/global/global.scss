@@ -6,7 +6,7 @@ body {
   flex-direction: column;
   min-height: 100%;
   min-width: 320px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   line-height: 100%;
   font-weight: 400;
@@ -45,21 +45,21 @@ html {
 .wrapper-tours-training {
   background-image:
     image-set(url("../../img/clouds/clouds-1.webp") type("image/webp") 1x,
-      url("../../img/clouds/clouds-1@2x.webp") type("image/webp") 2x,
-      url("../../img/clouds/clouds-1.jpg") type("image/jpeg") 1x,
-      url(".../../img/clouds/clouds-1@2x.jpg") type("image/jpeg") 2x);
+    url("../../img/clouds/clouds-1@2x.webp") type("image/webp") 2x,
+    url("../../img/clouds/clouds-1.jpg") type("image/jpeg") 1x,
+    url(".../../img/clouds/clouds-1@2x.jpg") type("image/jpeg") 2x);
   background-repeat: no-repeat;
   background-position: left calc(50vw + 19px) top 18px;
   background-size: 1183px 786px;
 
   @include m.tablet {
     background-image:
-    image-set(url("../../img/clouds/clouds-1-big.webp") type("image/webp") 1x,
+      image-set(url("../../img/clouds/clouds-1-big.webp") type("image/webp") 1x,
       url("../../img/clouds/clouds-1-big@2x.webp") type("image/webp") 2x,
       url("../../img/clouds/clouds-1-big.jpg") type("image/jpeg") 1x,
       url(".../../img/clouds/clouds-1-big@2x.jpg") type("image/jpeg") 2x);
-      background-position: left calc(50vw - 41px) top -92px;
-      background-size: 2046px 1630px;
+    background-position: left calc(50vw - 41px) top -92px;
+    background-size: 2046px 1630px;
   }
 
   @include m.desktop {

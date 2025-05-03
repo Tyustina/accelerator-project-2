@@ -5,9 +5,8 @@
   font-weight: 600;
   text-align: right;
   text-decoration: none;
+
   @include m.desktop {
     font-size: 18px;
   }
-
-
 }

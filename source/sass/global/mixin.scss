@@ -14,10 +14,12 @@
   color: v.$primary;
   bottom: 0.4em;
   opacity: 0.03;
+
   @media (min-width: v.$tablet-width) {
     font-size: 40px;
     bottom: 0.2em;
   }
+
   @media (min-width: v.$desktop-width) {
     font-size: 55px;
     bottom: 0.2em;

@@ -6,8 +6,8 @@ new Swiper('.training__swiper', {
   modules: [Navigation, Mousewheel],
   loop: false,
   navigation: {
-    nextEl: '.training-card__button--next',
-    prevEl: '.training-card__button--prev',
+    nextEl: '.training__button--next',
+    prevEl: '.training__button--prev',
   },
   spaceBetween: 20,
   slidesPerView: 1,

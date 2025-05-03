@@ -30,7 +30,6 @@
 
     padding: 292px 240px;
   }
-
 }
 
 .form::after {
@@ -53,7 +52,6 @@
   @include m.tablet {
     margin-top: 4px;
   }
-
 }
 
 .form__wrapper h2 {
@@ -109,6 +107,23 @@
   }
 }
 
+.form__input-container {
+  position: relative;
+}
+
+.form__label {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 14px;
+  font-size: 16px;
+  line-height: 100%;
+  color: v.$primary50;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
 .form__input {
   width: 100%;
   padding: 17px 15px 15px 14px;
@@ -125,9 +140,20 @@
 }
 
 .form__input::placeholder {
+  opacity: 0;
   font-size: 16px;
   line-height: 100%;
   color: v.$primary50;
+  transition: opacity 0.3s ease;
+
+}
+
+.form__input:focus.form__input::placeholder {
+  opacity: 1;
+}
+
+.form__input:focus+.form__label {
+  opacity: 0;
 }
 
 .form__button {

@@ -9,24 +9,25 @@
 }
 
 .nav__list {
-    @include m.list-reset;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: v.$white;
-    left: 0;
-    top: 100%;
-    width: 100%;
-    height: auto;
-    background-color: v.$additional;
-    padding-top: 30px;
-    padding-bottom: 50px;
-    z-index: 8;
-    transition: left 0.5s ease;
+  @include m.list-reset;
+
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: v.$white;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: auto;
+  background-color: v.$additional;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  z-index: 8;
+  transition: left 0.5s ease;
 
 
   @include m.tablet {
@@ -53,6 +54,7 @@
 
 .nav__item {
   @include m.container;
+
   display: block;
 
   @include m.desktop {

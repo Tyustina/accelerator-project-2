@@ -3,6 +3,7 @@
 
 .footer {
   @include m.container;
+
   padding-top: 22px;
 
   @include m.tablet {
@@ -44,6 +45,7 @@
 
 .footer__list {
   @include m.list-reset;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 7px;

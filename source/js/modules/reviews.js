@@ -9,7 +9,7 @@ new Swiper('.reviews__swiper', {
     nextEl: '.reviews__button--next',
     prevEl: '.reviews__button--prev',
   },
-  spaceBetween: 30,
+  spaceBetween: 40,
   slidesPerView: 'auto',
   slidesPerGroup: 1,
   speed: 600,

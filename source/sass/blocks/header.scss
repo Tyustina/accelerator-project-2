@@ -9,12 +9,14 @@
 
 .header__container {
   @include m.container;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: min-content min-content;
   row-gap: 16px;
   padding-top: 15px;
   padding-bottom: 13px;
+
   // z-index: 10;
   column-gap: 6px;
 
@@ -25,6 +27,7 @@
     padding-top: 20px;
     padding-bottom: 20px;
   }
+
   @include m.desktop {
     grid-template-columns: 205px 1fr max-content;
     gap: 30px;
@@ -58,16 +61,16 @@
   grid-column: 2/-1;
   grid-row: 2/-1;
   z-index: 10;
+
   @include m.tablet {
     font-size: 16px;
     grid-column: 3/-1;
     grid-row: 1/2;
   }
+
   @include m.desktop {
     font-size: 18px;
     grid-column: 3/-1;
     margin-top: 3px;
   }
-
-
 }

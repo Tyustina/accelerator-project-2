@@ -3,23 +3,27 @@
 
 .reviews {
   width: 320px;
-  margin: 0 auto;;
+  margin: 0 auto;
   padding-top: 36px;
 
   @include m.tablet {
     @include m.container;
+
     padding-top: 60px;
     padding-bottom: 40px;
   }
 
   @include m.desktop {
-    padding-top: 145px;
+    padding-top: 144px;
+    padding-bottom: 90px;
   }
 }
 
 .reviews__title {
   position: relative;
+
   @include m.container;
+
   margin-bottom: 17px;
 
   @include m.tablet {
@@ -27,10 +31,15 @@
     padding: 0;
     margin-bottom: 35px;
   }
+
+  @include m.desktop {
+    margin-bottom: 40px;
+  }
 }
 
 .reviews__title::before {
   @include m.title-shadow;
+
   content: "Отзывы";
   bottom: 0.3em;
 
@@ -40,14 +49,18 @@
 }
 
 .reviews .swiper {
+  display: grid;
+
   @include m.tablet {
     overflow: visible;
   }
 }
+
 .reviews .swiper-wrapper {
   padding: 15px;
   padding-bottom: 20px;
   margin: 0;
+  height: auto;
 
   @include m.tablet {
     padding: 0;

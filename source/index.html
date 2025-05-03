@@ -29,9 +29,10 @@
           <li class="nav__item"><a class="nav__link" href="#gallery">Фотографии</a></li>
           <li class="nav__item"><a class="nav__link" href="#contacts">Контакты</a></li>
         </ul>
-        <button class="nav__button"><span class="nav__button-marker"></span></button>
+        <button class="nav__button" type="button"><span class="nav__button-marker"></span><span
+            class="visually-hidden">Навигаация</span></button>
       </nav>
-      <svg class="header__logo">
+      <svg class="header__logo" width="142" height="42">
         <use href="/__spritemap#sprite-logo"></use>
       </svg>
       <a class="header__link link" href="tel:78000000000">8 800 000-00-00</a>
@@ -42,87 +43,87 @@
     <section class="hero" data-test="hero">
       <h2 class="visually-hidden">Лучшие туры</h2>
       <div class="hero__swiper-container">
-      <div class="hero__swiper main-slider swiper">
-        <ul class="main-slider__list swiper-wrapper">
-          <li class="main-slider__item swiper-slide">
-            <picture>
-              <source type="image/webp" media="(min-width:1440px)"
-                srcset="./img/bg-caucasus-big.webp 1x, ./img/bg-caucasus-big@2x.webp" width="1440" height="800">
-              <source type="image/jpeg" media="(min-width:1440px)"
-                srcset="./img/bg-caucasus-big.jpg 1x, ./img/bg-caucasus-big@2x.jpg" width="1440" height="800">
-              <source type="image/webp" srcset="./img/bg-caucasus.webp 1x, ./img/bg-caucasus@2x.webp 2x" width="768"
-                height="1034">
-              <img class="main-slider__img" src="./img/bg-caucasus.jpg" srcset="./img/bg-caucasus@2x.jpg" width="768"
-                height="1034" alt="Вершины Кавказа.">
-            </picture>
-            <div class="main-slider__wrapper">
-              <div>
-                <h3>Захватывающие вершины Кавказа</h3>
-                <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход
-                  на&nbsp;вершину
-                  горы Чегет.</p>
-                <a class="main-slider__link button" href="#">Смотреть тур</a>
+        <div class="hero__swiper main-slider swiper">
+          <ul class="main-slider__list swiper-wrapper">
+            <li class="main-slider__item swiper-slide">
+              <picture>
+                <source type="image/webp" media="(min-width:1440px)"
+                  srcset="./img/bg-caucasus-big.webp 1x, ./img/bg-caucasus-big@2x.webp" width="1440" height="800">
+                <source type="image/jpeg" media="(min-width:1440px)"
+                  srcset="./img/bg-caucasus-big.jpg 1x, ./img/bg-caucasus-big@2x.jpg" width="1440" height="800">
+                <source type="image/webp" srcset="./img/bg-caucasus.webp 1x, ./img/bg-caucasus@2x.webp 2x" width="768"
+                  height="1034">
+                <img class="main-slider__img" src="./img/bg-caucasus.jpg" srcset="./img/bg-caucasus@2x.jpg" width="768"
+                  height="1034" alt="Вершины Кавказа.">
+              </picture>
+              <div class="main-slider__wrapper">
+                <div>
+                  <h3>Захватывающие вершины Кавказа</h3>
+                  <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход
+                    на&nbsp;вершину
+                    горы Чегет.</p>
+                  <a class="main-slider__link button" href="#">Смотреть тур</a>
+                </div>
+                <div class="main-slider__info">
+                  <span class="main-slider__info-block main-slider__info-block--time">6 дней/5 ночей</span>
+                  <span class="main-slider__info-block main-slider__info-block--level">Высокая сложность</span>
+                </div>
               </div>
-              <div class="main-slider__info">
-                <span class="main-slider__info-block main-slider__info-block--time">6 дней/5 ночей</span>
-                <span class="main-slider__info-block main-slider__info-block--level">Высокая сложность</span>
+            </li>
+            <li class="main-slider__item swiper-slide">
+              <picture>
+                <source type="image/webp" media="(min-width:1440px)"
+                  srcset="./img/bg-kamchatka-big.webp 1x, ./img/bg-kamchatka-big@2x.webp" width="1440" height="800">
+                <source type="image/jpeg" media="(min-width:1440px)"
+                  srcset="./img/bg-kamchatka-big.jpg 1x, ./img/bg-kamchatka-big@2x.jpg" width="1440" height="800">
+                <source type="image/webp" srcset="./img/bg-kamchatka.webp 1x, ./img/bg-kamchatka@2x.webp 2x" width="768"
+                  height="1034">
+                <img class="main-slider__img" src="./img/bg-kamchatka.jpg" srcset="./img/bg-kamchatka@2x.jpg"
+                  width="768" height="1034" alt="Природа Камчатки.">
+              </picture>
+              <div class="main-slider__wrapper">
+                <div>
+                  <h3>Невероятная природа Камчатки</h3>
+                  <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых
+                    нетронутых
+                    уголков дикой природы в мире.</p>
+                  <a class="main-slider__link  button" href="#">Смотреть тур</a>
+                </div>
+                <div class="main-slider__info">
+                  <span class="main-slider__info-block main-slider__info-block--time">9 дней/10 ночей</span>
+                  <span class="main-slider__info-block main-slider__info-block--level">Средняя сложность</span>
+                </div>
               </div>
-            </div>
-          </li>
-          <li class="main-slider__item swiper-slide">
-            <picture>
-              <source type="image/webp" media="(min-width:1440px)"
-                srcset="./img/bg-kamchatka-big.webp 1x, ./img/bg-kamchatka-big@2x.webp" width="1440" height="800">
-              <source type="image/jpeg" media="(min-width:1440px)"
-                srcset="./img/bg-kamchatka-big.jpg 1x, ./img/bg-kamchatka-big@2x.jpg" width="1440" height="800">
-              <source type="image/webp" srcset="./img/bg-kamchatka.webp 1x, ./img/bg-kamchatka@2x.webp 2x" width="768"
-                height="1034">
-              <img class="main-slider__img" src="./img/bg-kamchatka.jpg" srcset="./img/bg-kamchatka@2x.jpg" width="768"
-                height="1034" alt="Природа Камчатки.">
-            </picture>
-            <div class="main-slider__wrapper">
-              <div>
-                <h3>Невероятная природа Камчатки</h3>
-                <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых
-                  нетронутых
-                  уголков дикой природы в мире.</p>
-                <a class="main-slider__link  button" href="#">Смотреть тур</a>
+            </li>
+            <li class="main-slider__item swiper-slide">
+              <picture>
+                <source type="image/webp" media="(min-width:1440px)"
+                  srcset="./img/bg-altay-big.webp 1x, ./img/bg-altay-big@2x.webp" width="1440" height="800">
+                <source type="image/jpeg" media="(min-width:1440px)"
+                  srcset="./img/bg-altay-big.jpg 1x, ./img/bg-altay-big@2x.jpg" width="1440" height="800">
+                <source type="image/webp" srcset="./img/bg-altay.webp 1x, ./img/bg-altay@2x.webp 2x" width="768"
+                  height="1034">
+                <img class="main-slider__img" src="./img/bg-altay.jpg" srcset="./img/bg-altay@2x.jpg" width="768"
+                  height="1034" alt="Пейзаж Алтайского края.">
+              </picture>
+              <div class="main-slider__wrapper">
+                <div>
+                  <h3>Магические пейзажи Алтайского Края</h3>
+                  <p>Алтайский трекинг-тур — это захватывающее приключение с посещением магических и захватывающих дух
+                    ландшафтов Алтайских гор.</p>
+                  <a class="main-slider__link button" href="#">Смотреть тур</a>
+                </div>
+                <div class="main-slider__info">
+                  <span class="main-slider__info-block main-slider__info-block--time">8 дней/7 ночей</span>
+                  <span class="main-slider__info-block main-slider__info-block--level">Лёгкая сложность</span>
+                </div>
               </div>
-              <div class="main-slider__info">
-                <span class="main-slider__info-block main-slider__info-block--time">9 дней/10 ночей</span>
-                <span class="main-slider__info-block main-slider__info-block--level">Средняя сложность</span>
-              </div>
-            </div>
-          </li>
-          <li class="main-slider__item swiper-slide">
-            <picture>
-              <source type="image/webp" media="(min-width:1440px)"
-                srcset="./img/bg-altay-big.webp 1x, ./img/bg-altay-big@2x.webp" width="1440" height="800">
-              <source type="image/jpeg" media="(min-width:1440px)"
-                srcset="./img/bg-altay-big.jpg 1x, ./img/bg-altay-big@2x.jpg" width="1440" height="800">
-              <source type="image/webp" srcset="./img/bg-altay.webp 1x, ./img/bg-altay@2x.webp 2x" width="768"
-                height="1034">
-              <img class="main-slider__img" src="./img/bg-altay.jpg" srcset="./img/bg-altay@2x.jpg" width="768"
-                height="1034" alt="Пейзаж Алтайского края.">
-            </picture>
-            <div class="main-slider__wrapper">
-              <div>
-                <h3>Магические пейзажи Алтайского Края</h3>
-                <p>Алтайский трекинг-тур — это захватывающее приключение с посещением магических и захватывающих дух
-                  ландшафтов Алтайских гор.</p>
-                <a class="main-slider__link button" href="#">Смотреть тур</a>
-              </div>
-              <div class="main-slider__info">
-                <span class="main-slider__info-block main-slider__info-block--time">8 дней/7 ночей</span>
-                <span class="main-slider__info-block main-slider__info-block--level">Лёгкая сложность</span>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <div class="main-slider__pagination swiper-pagination">
+            </li>
+          </ul>
+          <div class="main-slider__pagination swiper-pagination">
+          </div>
         </div>
       </div>
-    </div>
     </section>
     <div class="wrapper-tours-training">
       <section class="tours" data-test="tours" id="tours">
@@ -261,14 +262,14 @@
         <div class="training__swiper">
           <h2 class="training__title title">Наши инструкторы</h2>
           <div class="training__buttons swiper-buttons">
-            <button class="training-card__button training-card__button--prev swiper-button-prev swiper-button-disabled"
+            <button class="training__button training__button--prev swiper-button-prev swiper-button-disabled"
               type="button"><span class="visually-hidden">Предыдущий
                 слайд</span></button>
-            <button class="training-card__button training-card__button--next swiper-button-next swiper-button-disabled"
+            <button class="training__button training__button--next swiper-button-next swiper-button-disabled"
               type="button"><span class="visually-hidden">Предыдущий
                 слайд</span></button>
           </div>
-          <ul class="training-card__list swiper-wrapper">
+          <ul class="training__card-list swiper-wrapper">
             <li class="training-card swiper-slide">
               <picture>
                 <source type="image/webp" srcset="./img/trainers/trainer-1.webp 1x, ./img/trainers/trainer-1@2x.webp 2x"
@@ -280,7 +281,7 @@
                 <h3>Александр Прокофьев</h3>
                 <p>Строгий и внимательный инструктор, весёлый и&nbsp;общительный человек. Любит природу.</p>
                 <a class="training-card__link" href="vk.com">
-                  <svg class="training-card__link-icon">
+                  <svg class="training-card__link-icon" width="14" height="8">
                     <use href="/__spritemap#sprite-vk"></use>
                   </svg><span class="visually-hidden">Перейти на страницу тренера
                     во Вконтакте.</span></a>
@@ -298,7 +299,7 @@
                 <p>Видеть мир вокруг, познавать его&nbsp;опасности, находить друг друга, становиться ближе, чувствовать
                   — в&nbsp;этом назначение жизни.</p>
                 <a class="training-card__link" href="vk.com">
-                  <svg class="training-card__link-icon">
+                  <svg class="training-card__link-icon" width="14" height="8">
                     <use href="/__spritemap#sprite-vk"></use>
                   </svg><span class="visually-hidden">Перейти на страницу тренера
                     во Вконтакте.</span></a>
@@ -317,7 +318,7 @@
                   с&nbsp;ней&nbsp;чувствуешь себя
                   спокойно и уверенно.</p>
                 <a class="training-card__link" href="vk.com">
-                  <svg class="training-card__link-icon">
+                  <svg class="training-card__link-icon" width="14" height="8">
                     <use href="/__spritemap#sprite-vk"></use>
                   </svg><span class="visually-hidden">Перейти на страницу тренера
                     во Вконтакте.</span></a>
@@ -336,7 +337,7 @@
                   много
                   путешествует по Европе.</p>
                 <a class="training-card__link" href="vk.com">
-                  <svg class="training-card__link-icon">
+                  <svg class="training-card__link-icon" width="14" height="8">
                     <use href="/__spritemap#sprite-vk"></use>
                   </svg><span class="visually-hidden">Перейти на страницу тренера
                     во Вконтакте.</span></a>
@@ -353,7 +354,7 @@
                 <h3>Даниэль Васнецов</h3>
                 <p>Покорял самые сложные вершины. Выбирался из под лавин, дружит с медведями и не только.</p>
                 <a class="training-card__link" href="vk.com">
-                  <svg class="training-card__link-icon">
+                  <svg class="training-card__link-icon" width="14" height="8">
                     <use href="/__spritemap#sprite-vk"></use>
                   </svg><span class="visually-hidden">Перейти на страницу тренера
                     во Вконтакте.</span></a>
@@ -380,20 +381,17 @@
       </section>
     </div>
     <section class="about" data-test="about" id="about">
-      <picture>
-        <img src="./img/about-mob.jpg" srcset="./img/about-mob@2x.jpg" alt="Наша команда.">
-      </picture>
       <div class="about__container">
         <h2 class="about__title title">О нас</h2>
         <ul class="about__list">
-          <li>
+          <li class="about__item">
             <h3 class="about__subtitle subtitle">История компании</h3>
             <p class="about__text text">В далёком 2000 году мы начали заниматься туризмом — походы, поездки,
               восхождения, нам&nbsp;это&nbsp;настолько понравилось, что&nbsp;мы&nbsp;этим стали жить.
               Спустя&nbsp;5&nbsp;лет, в&nbsp;2005&nbsp;году мы основали компанию,
               чтобы показывать людям удивительные места нашей страны.</p>
           </li>
-          <li>
+          <li class="about__item">
             <h3 class="about__subtitle subtitle">Наша цель</h3>
             <p class="about__text text">Подарить вам незабываемые впечатления от похода в горы. Мы&nbsp;берём на себя
               все&nbsp;организационные вопросы. При&nbsp;организации мы&nbsp;обязательно учтём все&nbsp;ваши пожелания.
@@ -453,10 +451,12 @@
             </li>
             <li class="reviews-card swiper-slide">
               <picture>
-                <source type="image/jpeg" media="(min-width:768px)" srcset="./img/reviews/photo3.webp 2x, ./img/reviews/photo3@2x.webp 2x" width="250" height="169">
-                <img class="reviews-card__img" src="./img/reviews/photo3.jpg" srcset="./img/reviews/photo3@2x.jpg" alt="Евгения Баженова." width="250" height="169">
+                <source type="image/jpeg" media="(min-width:768px)"
+                  srcset="./img/reviews/photo3.webp 2x, ./img/reviews/photo3@2x.webp 2x" width="250" height="169">
+                <img class="reviews-card__img" src="./img/reviews/photo3.jpg" srcset="./img/reviews/photo3@2x.jpg"
+                  alt="Евгения Баженова." width="250" height="169">
               </picture>
-                            <div class="reviews-card__text-wrapper">
+              <div class="reviews-card__text-wrapper">
                 <h3 class="reviews-card__name">Евгения Баженова</h3>
                 <span class="reviews-card__data">23 года, Кострома</span>
                 <p>Ранее не ходила на такие длинные дистанции. В первый день прошли около 30 км, физически я устала
@@ -467,14 +467,16 @@
             </li>
             <li class="reviews-card swiper-slide">
               <picture>
-                <source type="image/jpeg" media="(min-width:768px)" srcset="./img/reviews/photo4.webp 2x, ./img/reviews/photo4@2x.webp 2x" width="250" height="169">
-                <img class="reviews-card__img" src="./img/reviews/photo4.jpg" srcset="./img/reviews/photo4@2x.jpg" alt="Елена Пирогова." width="250" height="169">
+                <source type="image/jpeg" media="(min-width:768px)"
+                  srcset="./img/reviews/photo4.webp 2x, ./img/reviews/photo4@2x.webp 2x" width="250" height="169">
+                <img class="reviews-card__img" src="./img/reviews/photo4.jpg" srcset="./img/reviews/photo4@2x.jpg"
+                  alt="Елена Пирогова." width="250" height="169">
               </picture>
               <div class="reviews-card__text-wrapper">
                 <h3 class="reviews-card__name">Елена Пирогова</h3>
                 <span class="reviews-card__data">37 лет, Тюмень</span>
                 <p>Это был опыт, изменивший мою жизнь! Думала, не справлюсь, но все получилось! Дух захватывает, когда
-                  наконец‑то, преодолев все трудности и препятствия, взбираешься на вершину. </p>
+                  наконец‑то, преодолев все трудности и препятствия, взбираешься на вершину.</p>
                 <p>У нас собралась потрясающая команда. Все друг друга поддерживали, по вечерам мы сидели вместе
                   у костра и пели песни. Обязательно повторю такое приключение!</p>
               </div>
@@ -485,15 +487,16 @@
     </section>
     <section class="adv" data-test="adv">
       <h2 class="adv__title title">Преимущества</h2>
-      <div class="adv__swiper">
+      <div class="adv__swiper-container">
         <div class="adv__buttons swiper-buttons">
-          <button class="adv__button adv__button--prev swiper-button-prev swiper-button-disabled" type="button"><span
-              class="visually-hidden">Предыдущий
-              слайд</span></button>
-          <button class="adv__button adv__button--next swiper-button-next swiper-button-disabled" type="button"><span
-              class="visually-hidden">Предыдущий
-              слайд</span></button>
-        </div>
+        <button class="adv__button adv__button--prev swiper-button-prev swiper-button-disabled" type="button"><span
+          class="visually-hidden">Предыдущий
+          слайд</span></button>
+      <button class="adv__button adv__button--next swiper-button-next swiper-button-disabled" type="button"><span
+          class="visually-hidden">Предыдущий
+          слайд</span></button>
+    </div>
+      <div class="adv__swiper">
         <ul class="adv__list swiper-wrapper">
           <li class="adv__item adv__item--safety swiper-slide">
             <h3>Безопасность</h3>
@@ -504,28 +507,29 @@
           </li>
           <li class="adv__item adv__item--expertise swiper-slide">
             <h3>Экспертиза и знания</h3>
-            <p>Наша команда опытных гидов имеет обширные знания о местности, погодных условиях и технике безопасности.
-              Это гарантирует, что наши клиенты находятся в надёжных руках и могут в полной мере насладиться опытом
-              без опасений.</p>
+            <p>Наша команда опытных гидов имеет обширные знания о местности, погодных условиях и технике безопасности.<br>
+              Это гарантирует, что&nbsp;наши&nbsp;клиенты находятся в&nbsp;надёжных&nbsp;руках и могут в&nbsp;полной мере насладиться&nbsp;опытом
+              без&nbsp;опасений.</p>
           </li>
           <li class="adv__item adv__item--eqipment swiper-slide">
             <h3>Оборудование и снаряжение</h3>
-            <p>Мы предоставляем клиентам все необходимое оборудование, необходимое для путешествия. Это избавляет
-              клиентов от необходимости покупать, брать с собой снаряжение, что делает путешествие более удобным
-              и экономически выгодным.</p>
+            <p>Мы предоставляем клиентам все&nbsp;необходимое&nbsp;оборудование, необходимое&nbsp;для&nbsp;путешествия. Это&nbsp;избавляет
+              клиентов от&nbsp;необходимости<br>покупать, брать с&nbsp;собой&nbsp;снаряжение, что&nbsp;делает путешествие более&nbsp;удобным
+              и&nbsp;экономически&nbsp;выгодным.</p>
           </li>
           <li class="adv__item adv__item--route swiper-slide">
             <h3>Индивидуальные маршруты</h3>
-            <p>Предлагаем широкий выбор туров, отвечающих различным уровням мастерства и интересам. Мы также можем
-              адаптировать маршруты к вашим конкретным потребностям и предпочтениям, чтобы вы получили индивидуальный
+            <p>Предлагаем широкий выбор туров, отвечающих различным уровням мастерства и интересам. Мы&nbsp;также&nbsp;можем
+              адаптировать маршруты к вашим конкретным потребностям и&nbsp;предпочтениям, чтобы вы получили индивидуальный
               опыт.</p>
           </li>
           <li class="adv__item adv__item--care swiper-slide">
-            <h3>Бережное отношение к природе</h3>
+            <h3>Бережное отношение к&nbsp;природе</h3>
             <p>Уделяем первостепенное внимание охране окружающей среды и гарантируем, что туры оказывают минимальное
               воздействие на природную среду. Наша компания следует принципу «Не оставлять следов».</p>
-          </li>
+            </li>
         </ul>
+      </div>
       </div>
     </section>
     <section class="gallery" data-test="gallery" id="gallery">
@@ -618,19 +622,22 @@
         <h2>Остались вопросы?</h2>
         <p>Заполните форму и наш оператор свяжется с&nbsp;вами&nbsp;для&nbsp;консультации.</p>
         <form class="form__container" action="https://echo.htmlacademy.ru" method="post">
-          <label class="form__text"><input class="form__input form__input--tel" type="tel" name="tel"
-              placeholder="Телефон" pattern="^[+78][0-9]{10}$"
-              title="Пожалуйста, введите номер телефона в формате +7XXXXXXXXXX или 8XXXXXXXXXX" required>
-            <span class="form__error form__error--tel"></span><span class="visually-hidden">Телефон</span></label>
-          <label class="form__text"><input class="form__input form__input--name" type="email" name="email"
-              placeholder="Email" pattern="^[а-яА-Я\s]+$" title="Поле должно содержать только буквы и пробелы" required>
-            <span class="form__error form__error--email"></span><span class="visually-hidden">Email</span></label>
+          <div class="form__input-container">
+            <input class="form__input form__input--tel" type="tel" id="phone" name="phone" placeholder="+7 (000)-000-00-00" pattern="^[+78][0-9]{10}$" title="Пожалуйста, введите номер телефона в формате +7XXXXXXXXXX или 8XXXXXXXXXX" required>
+            <label class="form__label" for="phone">Телефон</label>
+          </div>
+          <div class="form__input-container">
+            <input class="form__input form__input--name" type="email" id="email" name="email"
+                placeholder="email@domen.ru" pattern="^[а-яА-Я\s]+$" title="Поле должно содержать только буквы и пробелы" required>
+                <label class="form__label" for="email">Email</label>
+              </div>
           <button class="form__button button" type="submit">Отправить</button>
+        </form>
       </div>
-      </form>
+
     </section>
   </main>
-  <footer data-test="footer">
+  <div data-test="footer">
     <section class="contacts" id="contacts">
       <div class="contacts__container">
         <h2 class="contacts__title title">Контакты</h2>
@@ -652,17 +659,17 @@
         </ul>
       </div>
       <div class="contacts__map-wrapper">
-        <svg class="contacts__pin">
+        <svg class="contacts__pin" width="22" height="22">
           <use href="/__spritemap#sprite-pin-color"></use>
         </svg>
         <picture>
-          <source source type="image/webp" media="(min-width:1440px)"
+          <source type="image/webp" media="(min-width:1440px)"
             srcset="./img/map/map-desk.webp 1x, ./img/map/map-desk@2x.webp 2x" width="600" height="324">
-          <source source type="image/jpeg" media="(min-width:1440px)"
+          <source type="image/jpeg" media="(min-width:1440px)"
             srcset="./img/map/map-desk.jpg 1x, ./img/map/map-desk@2x.jpg 2x" width="600" height="324">
-          <source source type="image/webp" media="(min-width:768px)"
+          <source type="image/webp" media="(min-width:768px)"
             srcset="./img/map/map-tab.webp 1x, ./img/map/map-tab@2x.webp 2x" width="768" height="365">
-          <source source type="image/jpeg" media="(min-width:768px)"
+          <source type="image/jpeg" media="(min-width:768px)"
             srcset="./img/map/map-tab.jpg 1x, ./img/map/map-tab@2x.jpg 2x" width="768" height="365">
           <source type="image/webp" srcset="./img/map/map.webp 1x, ./img/map/map@2x.webp 2x" width="713" height="343">
           <img class="contacts__map" src="./img/map/map.jpg" srcset="./img/map/map@2x.jpg" alt="Мы на карте."
@@ -671,9 +678,9 @@
 
       </div>
     </section>
-    <section class="footer">
+    <footer class="footer">
       <div class="footer__nav">
-        <svg class="footer__logo">
+        <svg class="footer__logo" width="142" height="42">
           <use href="/__spritemap#sprite-logo"></use>
         </svg>
         <ul class="footer__list nav">
@@ -695,9 +702,8 @@
               class="visually-hidden">Reddit</span></a></li>
       </ul>
       <p class="footer__conf">Политика конфиденциальности</p>
-    </section>
-
-  </footer>
+    </footer>
+  </div>
   <script type="module" src="js/main.js"></script>
 </body>
 

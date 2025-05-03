@@ -18,7 +18,7 @@ function createSwiper() {
     },
     slidesPerView: 'auto',
     slidesPerGroup: 2,
-    loopadditionalslides: 1,
+    initialSlide: 1,
     speed: 800,
   });
 }

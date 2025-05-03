@@ -3,6 +3,7 @@
 
 .socials {
   @include m.list-reset;
+
   display: flex;
   justify-content: center;
   gap: 18px;
@@ -24,7 +25,7 @@
 .socials__item {
   display: flex;
   justify-content: center;
-    align-items: center;
+  align-items: center;
   width: 30px;
   height: 30px;
   border: 1px solid v.$primary20;

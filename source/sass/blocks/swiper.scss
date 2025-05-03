@@ -23,6 +23,7 @@
   height: 35px;
   background-color: v.$additional;
   border: 1px solid transparent;
+
   &::before {
     position: absolute;
     content: "";
@@ -43,6 +44,7 @@
   height: 35px;
   background-color: v.$additional;
   border: 1px solid transparent;
+
   &::before {
     position: absolute;
     content: "";
@@ -61,5 +63,4 @@
 
 .swiper-button:hover {
   border: 1px solid transparent;
-
 }

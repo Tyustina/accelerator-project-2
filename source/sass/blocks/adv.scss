@@ -3,6 +3,7 @@
 
 .adv {
   @include m.container;
+
   padding-top: 36px;
   padding-bottom: 20px;
 
@@ -33,6 +34,7 @@
 
 .adv__title::before {
   @include m.title-shadow;
+
   content: "Преимущества";
   left: 50%;
   transform: translateX(-50%);
@@ -44,14 +46,22 @@
 
 .adv__swiper {
   @include m.desktop {
-    position: relative;
+    display: flex;
     padding-bottom: 50px;
+    width: 3250px;
+    flex-wrap: nowrap;
+    // margin-left: 204px;
   }
 }
 
+.adv__swiper-container {
+  position: relative;
+
+}
 
 .adv .swiper-wrapper {
   @include m.list-reset;
+
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -64,21 +74,21 @@
   }
 
   @include m.desktop {
-    width: 2500px;
+    // width: 1440px;
     flex-wrap: nowrap;
-    margin-left: 31%;
+
   }
 }
 
 .adv .swiper-slide {
   position: relative;
   border: 1px solid v.$additional20;
-  padding: 81px 10px 19px 10px;
+  padding: 81px 9px 19px;
 
   @include m.tablet {
     width: 324px;
     min-height: 340px;
-    padding: 102px 19px 29px 19px;
+    padding: 102px 19px 29px;
   }
 
   @include m.desktop {
@@ -92,7 +102,6 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 100%;
-  width: 90%;
   text-align: center;
   margin: 0 auto;
   margin-bottom: 15px;
@@ -117,9 +126,18 @@
     font-size: 14px;
     line-height: 22px;
   }
+}
+.adv__item--care h3 {
+  width: 90%;
 
-  @include m.desktop {}
-
+  @include m.tablet {
+    width: 100%;
+  }
+}
+.adv__item br {
+  @include m.tablet {
+    display: none;
+  }
 }
 
 .adv__item::after {

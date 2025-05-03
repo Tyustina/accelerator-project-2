@@ -4,34 +4,59 @@
 .about {
   padding-top: 20px;
   padding-bottom: 20px;
+  background-image:
+    image-set(url("../../img/about-mob.webp") 1x type("image/webp"),
+      url("../../img/about-mob@2x.webp") 2x type("image/webp"),
+      url("../../img/about-mob.jpg") 1x type("image/jpeg"),
+      url("../../img/about-mob@2x.jpg") 2x type("image/jpeg"));
+  background-size: 627px 442px;
+  background-position: -92px -24px;
+  background-repeat: no-repeat;
 
   @include m.tablet {
-    width: 768px;
-    margin: 0 auto;
-    position: relative;
-    display: grid;
-    grid-template-columns: minmax(450px, 542px) 270px;
-    padding: 60px 48px 42px 0;
+    padding: 0 45px;
+    background-size: 543px 383px;
+    background-position: -24px 195px;
+  }
+
+  @media (min-width: 1100px) {
+    background-size: 651px 459px;
+    background-position: -24px 100px;
+  }
+
+  @media (min-width: 1300px) {
+    background-size: 760px 536px;
   }
 
   @include m.desktop {
-    width: 1440px;
-    margin: 0 auto;
-    padding: 145px 120px 180px 120px;
-    grid-template-columns: 1fr 660px;
+    background-size: 796px 568px;
+    background-position: -96px 76px;
   }
+
 }
 
 .about__container {
   @include m.container;
-  padding-top: 16px;
+  display: grid;
+  padding-top: 415px;
+  gap: 43px;
 
   @include m.tablet {
-    grid-column: 2/-1;
-    width: auto;
-    margin: 0;
-    padding: 0;
+    display: grid;
+    @include m.container;
+    grid-template-columns: 312px 270px;
+    padding-top: 60px;
+    padding-bottom: 42px;
+    gap: 48px;
   }
+
+  @include m.desktop {
+    grid-template-columns: 436px 660px;
+    gap: 59px;
+    padding-top: 145px;
+    padding-bottom: 180px;
+  }
+
 }
 
 // .about::before {
@@ -74,11 +99,13 @@
 
 .about__list {
   @include m.list-reset;
+
   display: flex;
   flex-direction: column;
   gap: 26px;
 
   @include m.tablet {
+    grid-column: 2/-1;
     gap: 29px;
   }
 
@@ -87,43 +114,49 @@
   }
 }
 
-.about__title {
-  position: relative;
-  margin-bottom: 42px;
+.about__item {
+  display: grid;
+  gap: 14px;
 
   @include m.tablet {
-    margin-bottom: 48px;
+    gap: 11px;
   }
 
   @include m.desktop {
-    margin-bottom: 59px;
+    gap: 16px;
   }
+}
 
+.about__title {
+  position: relative;
+
+  @include m.tablet {
+    grid-column: 2/-1;
+  }
 }
 
 .about__title::before {
   @include m.title-shadow;
   content: "О нас";
+
+  @include m.desktop {
+    bottom: 0.6em;
+  }
 }
 
 .about__subtitle {
-  margin-bottom: 14px;
-
   @include m.tablet {
     font-size: 18px;
-    margin-bottom: 11px;
   }
 
   @include m.desktop {
     font-size: 21px;
-    margin-bottom: 16px;
   }
 }
 
 .about__text {
   font-size: 14px;
   line-height: 20px;
-  margin-bottom: 28px;
   margin: 0;
 
   @include m.tablet {

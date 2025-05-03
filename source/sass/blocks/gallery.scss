@@ -18,6 +18,7 @@
 
 .gallery__text-wrapper {
   @include m.container;
+
   display: grid;
   gap: 27px;
 
@@ -29,12 +30,14 @@
     gap: 24px;
   }
 }
+
 .gallery__title {
   position: relative;
 }
 
 .gallery__title::before {
   @include m.title-shadow;
+
   content: "Фотогалерея";
   bottom: 8px;
 
@@ -64,7 +67,6 @@
     font-size: 16px;
     line-height: 24px;
   }
-
 }
 
 .gallery__swiper {
@@ -77,6 +79,7 @@
     width: 768px;
     padding-top: 21px;
   }
+
   @include m.desktop {
     width: 100%;
     margin: 0 auto;
@@ -87,6 +90,7 @@
 .gallery__swiper-container {
   position: relative;
 }
+
 .gallery__swiper .swiper-wrapper {
   display: flex;
   flex-direction: row;
@@ -97,6 +101,7 @@
   @include m.tablet {
     gap: 2px;
   }
+
   @include m.desktop {
     gap: 5px;
   }
@@ -179,20 +184,19 @@
     width: 284px;
     height: 223px;
   }
-
 }
 
 .gallery__img--4 {
   width: 251px;
   object-position: center;
 
-  @include m.desktop{
+  @include m.desktop {
     width: 284px;
   }
 }
 
 .gallery__img--5 {
-  object-position: center ;
+  object-position: center;
 }
 
 .gallery__buttons {
@@ -213,6 +217,7 @@
   left: calc(50% - 5px);
   top: calc(50% - 4px);
 }
+
 .gallery__buttons .swiper-button-prev::before {
   left: calc(50% - 8px);
   top: calc(50% - 4px);
