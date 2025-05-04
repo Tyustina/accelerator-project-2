@@ -70,7 +70,7 @@
   }
 }
 
-.training__text {
+.training p:not(.training-card p) {
   font-size: 14px;
   line-height: 20px;
   margin: 0;

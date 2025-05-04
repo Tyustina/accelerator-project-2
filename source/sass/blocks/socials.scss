@@ -23,13 +23,24 @@
 }
 
 .socials__item {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 30px;
   height: 30px;
+  cursor: pointer;
+}
+
+.socials__item::before {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
   border: 1px solid v.$primary20;
   background-color: transparent;
+  top: 0;
+  left: 0;
 }
 
 .socials__link--vk {
@@ -60,4 +71,38 @@
   mask-repeat: no-repeat;
   mask-position: cover;
   background-color: v.$primary;
+}
+
+.socials__item:hover:before {
+  border-color: v.$primary;
+}
+
+.socials__item:focus:before {
+  border-color: transparent;
+}
+
+.socials__item:active::before {
+  background-color: v.$blue;
+  border-color: transparent;
+}
+
+.socials__item:active .socials__link--ok,
+.socials__item:active .socials__link--reddit,
+.socials__item:active .socials__link--vk {
+  background-color: v.$white;
+}
+
+.socials__item--disabled {
+  border-color: v.$disabled;
+  cursor: default;
+  pointer-events: none;
+}
+
+
+.socials__item--disabled .socials__link--ok,
+.socials__item--disabled .socials__link--reddit,
+.socials__item--disabled .socials__link--vk {
+  background-color: v.$disabled;
+  cursor: default;
+  pointer-events: none;
 }

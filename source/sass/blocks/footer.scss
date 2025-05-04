@@ -106,6 +106,22 @@
     color: v.$primary;
     text-align: right;
   }
+
+  &:hover {
+    color: v.$additional20;
+  }
+
+  &:focus {
+    color: v.$additional;
+  }
+
+  &:active {
+    color: v.$blue;
+  }
+
+  &--disabler {
+    color: v.$disabled;
+  }
 }
 
 .footer__conf {

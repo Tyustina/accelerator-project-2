@@ -11,9 +11,13 @@
   color: v.$white;
   z-index: 2;
 
-  // @include m.tablet {
-  //   gap: 15.5px
-  // }
+  @include m.tablet {
+    gap: 14px;
+  }
+
+  @include m.desktop {
+    gap: 15px;
+  }
 }
 
 .card__info {
@@ -59,6 +63,7 @@
 
   @include m.tablet {
     left: 15.5px;
+    top: 8px;
   }
 }
 
@@ -67,6 +72,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 14px;
+
+  @include m.tablet {
+    gap: 15px;
+  }
 }
 
 .card__period-day,
@@ -84,7 +93,7 @@
   display: block;
   width: 20px;
   height: 20px;
-  left: 0;
+  left: 1px;
   top: 1px;
   mask-image: url("/__spritemap#sprite-sun-view");
   mask-repeat: no-repeat;
@@ -114,7 +123,13 @@
   margin: 0;
   margin-bottom: 15px;
 
+  @include m.tablet {
+    margin-top: 1.5px;
+  }
+
+
   @include m.desktop {
+    margin-top: 0;
     width: 90%;
   }
 }
@@ -126,6 +141,7 @@
   width: 80px;
   height: 1px;
   background-color: v.$white;
+  opacity: 0.2;
   bottom: -15px;
   left: 0;
 }
@@ -134,6 +150,14 @@
   display: grid;
   grid-template-columns: repeat(3, max-content);
   justify-content: space-between;
+
+  @include m.tablet {
+    margin-top: 1px;
+  }
+
+  @include m.desktop {
+    margin-top: 0;
+  }
 }
 
 .card__details-container {
@@ -162,4 +186,8 @@
   margin-left: 2px;
   margin-top: -1px;
   transform: scale(1.03);
+
+  @include m.tablet {
+    margin-top: -1.5px;
+  }
 }

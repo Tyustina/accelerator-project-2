@@ -16,8 +16,6 @@
   row-gap: 16px;
   padding-top: 15px;
   padding-bottom: 13px;
-
-  // z-index: 10;
   column-gap: 6px;
 
   @include m.tablet {
@@ -72,5 +70,21 @@
     font-size: 18px;
     grid-column: 3/-1;
     margin-top: 3px;
+  }
+
+  &:hover {
+    color: v.$white50;
+  }
+
+  &:focus {
+    color: v.$primary;
+  }
+
+  &:active {
+    color: v.$blue;
+  }
+
+  &--disabler {
+    color: v.$disabled;
   }
 }

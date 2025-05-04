@@ -9,10 +9,23 @@ new Swiper('.hero__swiper', {
   slidesPerView: 1,
   pagination: {
     el: '.swiper-pagination',
-    bulletClass: 'main-slider__bullet',
-    bulletActiveClass: 'main-slider__bullet--active',
     type: 'bullets',
     clickable: true,
+    bulletActiveClass: 'main-slider__bullet--active',
+    renderBullet: function (index, className) {
+      return `<button class="${className} main-slider__bullet" tabindex="0"></button>`;
+    },
+  },
+  on: {
+    slideChange: function () {
+      this.slides.forEach((slide, index) => {
+        const isActive = index === this.activeIndex;
+        slide.querySelectorAll('a, button, input, textarea, select, [tabindex]')
+          .forEach((el) => {
+            el.tabIndex = isActive ? 0 : -1;
+          });
+      });
+    },
   },
   breakpoints: {
     1440: {

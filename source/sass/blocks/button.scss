@@ -15,6 +15,7 @@
   color: v.$white;
   border: 1px solid transparent;
   box-sizing: border-box;
+  cursor: pointer;
 
   &:hover {
     background-color: v.$white;
@@ -36,5 +37,7 @@
 
   &--disabled {
     background-color: v.$disabled;
+    pointer-events: none;
+    cursor: default;
   }
 }

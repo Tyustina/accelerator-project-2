@@ -59,45 +59,7 @@
 
 }
 
-// .about::before {
-//   position: relative;
-//   content: "";
-//   display: block;
-//   width: 622px;
-//   height: 400px;
-//   background-image:
-//     image-set(url("../../img/about-mob.webp") 1x type("image/webp"),
-//       url("../../img/about-mob@2x.webp") 2x type("image/webp"),
-//       url("../../img/about-mob.jpg") 1x type("image/jpeg"),
-//       url("../../img/about-mob@2x.jpg") 2x type("image/jpeg"));
-//   background-size: 101%;
-//   background-position: -93px -49px;
-//   background-repeat: no-repeat;
-
-//   @include m.tablet {
-//     position: absolute;
-//     height: 331px;
-//     background-size: 87%;
-//     z-index: -1;
-//     background-position: -23px 0px;
-//     top: 26%;
-//   }
-
-//   @include m.desktop {
-//     width: 840px;
-//     height: 498px;
-//     background-image:
-//       image-set(url("../../img/about.webp") 1x type("image/webp"),
-//         url("../../img/about@2x.webp") 2x type("image/webp"),
-//         url("../../img/about.jpg") 1x type("image/jpeg"),
-//         url("../../img/about@2x.jpg") 2x type("image/jpeg"));
-//     background-size: cover;
-//     background-position: -90px -39px;
-//     top: 20%;
-//   }
-// }
-
-.about__list {
+.about ul {
   @include m.list-reset;
 
   display: flex;
@@ -114,7 +76,7 @@
   }
 }
 
-.about__item {
+.about li {
   display: grid;
   gap: 14px;
 
@@ -127,15 +89,23 @@
   }
 }
 
-.about__title {
+.about h2 {
   position: relative;
-
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 100%;
+  text-align: left;
+  margin: 0;
   @include m.tablet {
     grid-column: 2/-1;
+    font-size: 25px;
+  }
+  @include m.desktop {
+    font-size: 35px;
   }
 }
 
-.about__title::before {
+.about h2::before {
   @include m.title-shadow;
   content: "О нас";
 
@@ -144,7 +114,12 @@
   }
 }
 
-.about__subtitle {
+.about h3 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: left;
+  margin: 0;
   @include m.tablet {
     font-size: 18px;
   }
@@ -154,7 +129,7 @@
   }
 }
 
-.about__text {
+.about p {
   font-size: 14px;
   line-height: 20px;
   margin: 0;
