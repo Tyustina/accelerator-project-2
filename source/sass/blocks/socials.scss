@@ -73,11 +73,11 @@
   background-color: v.$primary;
 }
 
-.socials__item:hover:before {
+.socials__item:hover::before {
   border-color: v.$primary;
 }
 
-.socials__item:focus:before {
+.socials__item:focus::before {
   border-color: transparent;
 }
 

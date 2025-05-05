@@ -9,8 +9,7 @@
 .main-slider__wrapper {
   display: flex;
   flex-direction: column;
-  // align-items: center;
-  z-index: 2;
+  z-index: 20;
   margin-bottom: 15px;
 
   @include m.tablet {
@@ -26,34 +25,49 @@
 .main-slider__list {
   @include m.list-reset;
 }
+
 .main-slider__item--kamchatka .main-slider__wrapper {
-  @include m.tablet{
+  @include m.tablet {
     margin-bottom: 468px;
+  }
+
+  @include m.desktop {
+    margin-bottom: 13px;
   }
 }
 
 .main-slider__item--kamchatka::before {
   @include m.tablet {
-  position: absolute;
-  display: block;
-  content: "";
-  width: 442px;
-  height: 365px;
-  background-image:
-    image-set(url("../../img/kamchatka-cards.webp") 1x type("image/webp"),
+    position: absolute;
+    display: block;
+    content: "";
+    width: 442px;
+    height: 365px;
+    background-image:
+      image-set(url("../../img/kamchatka-cards.webp") 1x type("image/webp"),
       url("../../img/kamchatka-cards@2x.webp") 2x type("image/webp"),
       url("../../img/kamchatka-cards.png") 1x type("image/jpeg"),
       url("../../img/kamchatka-cards@2x.png") 2x type("image/jpeg"));
-  background-size: cover;
-  background-repeat: no-repeat;
-  top: 472px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 472px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
   }
+
   @include m.desktop {
     width: 410px;
     height: 459px;
+    top: 187px;
+    left: unset;
+    right: -85px;
+    background-image:
+      image-set(url("../../img/kamchatka-cards-desk.webp") 1x type("image/webp"),
+      url("../../img/kamchatka-cards-desk@2x.webp") 2x type("image/webp"),
+      url("../../img/kamchatka-cards-desk.png") 1x type("image/jpeg"),
+      url("../../img/kamchatka-cards-desk@2x.png") 2x type("image/jpeg"));
+    background-position: center;
   }
 }
 
@@ -261,7 +275,7 @@
 }
 
 .main-slider__bullet:hover {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
 }
 
 .main-slider__bullet:active {
@@ -278,6 +292,7 @@
   right: -4px;
   background-color: transparent;
   border: 1px solid v.$white50;
+
   @include m.tablet {
     width: 26px;
     height: 26px;

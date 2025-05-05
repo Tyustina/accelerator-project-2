@@ -143,7 +143,7 @@
 
 .gallery__item-wrapper {
   display: grid;
-  grid-template-rows: 134.5px 124.5px;
+  grid-template-rows: max-content max-content;
   gap: 7px;
 
   @include m.tablet {

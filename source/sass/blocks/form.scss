@@ -9,9 +9,9 @@
   background-color: v.$additional;
   background-image:
     image-set(url("../../img/form/form-bg.webp") 1x type("image/webp"),
-      url("../../img/form/form-bg@2x.webp") 2x type("image/webp"),
-      url("../../img/form/form-bg.jpg") 1x type("image/jpeg"),
-      url("../../img/form/form-bg.jpg") 2x type("image/jpeg"));
+    url("../../img/form/form-bg@2x.webp") 2x type("image/webp"),
+    url("../../img/form/form-bg.jpg") 1x type("image/jpeg"),
+    url("../../img/form/form-bg.jpg") 2x type("image/jpeg"));
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -24,9 +24,9 @@
   @include m.desktop {
     background-image:
       image-set(url("../../img/form/form-desk.webp") 1x type("image/webp"),
-        url("../../img/form/form-desk@2x.webp") 2x type("image/webp"),
-        url("../../img/form/form-desk.jpg") 1x type("image/jpeg"),
-        url("../../img/form/form-desk.jpg") 2x type("image/jpeg"));
+      url("../../img/form/form-desk@2x.webp") 2x type("image/webp"),
+      url("../../img/form/form-desk.jpg") 1x type("image/jpeg"),
+      url("../../img/form/form-desk.jpg") 2x type("image/jpeg"));
 
     padding: 292px 240px;
   }
@@ -129,6 +129,7 @@
   padding: 17px 15px 15px 14px;
   border-radius: 2px;
   border: 1px solid v.$additional10;
+  cursor: pointer;
 
   @include m.tablet {
     padding: 20px 15px 17px 29px;
@@ -137,6 +138,30 @@
   @include m.desktop {
     padding-bottom: 19px;
   }
+
+  &:hover {
+    border-color: v.$additional;
+  }
+
+  &:focus {
+    border-color: v.$primary;
+  }
+
+  &:disabled {
+    border-color: v.$disabled;
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+.form__input--invalid {
+  border-color: v.$error; /* Или цвет из вашего стайлгайда */
+  box-shadow: none;
+}
+
+.form__input--invalid + .form__label::after {
+  content: " - Ошибка!"; /* Добавляем текст ошибки к label */
+  color: v.$error;
 }
 
 .form__input::placeholder {
@@ -145,14 +170,13 @@
   line-height: 100%;
   color: v.$primary50;
   transition: opacity 0.3s ease;
-
 }
 
 .form__input:focus.form__input::placeholder {
   opacity: 1;
 }
 
-.form__input:focus+.form__label {
+.form__input:focus + .form__label {
   opacity: 0;
 }
 

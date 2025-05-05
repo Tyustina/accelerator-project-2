@@ -124,12 +124,14 @@
   margin-bottom: 15px;
 
   @include m.tablet {
-    margin-top: 1.5px;
+    margin-top: 1px;
+    margin-left: 0.5px;
   }
 
 
   @include m.desktop {
     margin-top: 0;
+    margin-left: 0;
     width: 90%;
   }
 }
@@ -152,7 +154,7 @@
   justify-content: space-between;
 
   @include m.tablet {
-    margin-top: 1px;
+    margin-top: 1.5px;
   }
 
   @include m.desktop {

@@ -64,30 +64,30 @@
 }
 
 .swiper-button-next:hover,
-.swiper-button-prev:hover  {
+.swiper-button-prev:hover {
   border: 1px solid v.$blue;
   background-color: v.$white;
 }
-.swiper-button-next:hover:before,
-.swiper-button-prev:hover:before {
+
+.swiper-button-next:hover::before,
+.swiper-button-prev:hover::before {
   background-color: v.$blue;
 }
 
 .swiper-button-next:focus,
-.swiper-button-prev:focus  {
+.swiper-button-prev:focus {
   border: 1px solid transparent;
   background-color: v.$white;
 }
-.swiper-button-next:focus:before,
-.swiper-button-prev:focus:before {
+
+.swiper-button-next:focus::before,
+.swiper-button-prev:focus::before {
   background-color: v.$blue;
 }
 
 .swiper-button-next:active,
-.swiper-button-prev:active  {
+.swiper-button-prev:active {
   border: 1px solid transparent;
   background-color: v.$blue;
 }
-
-
 

@@ -174,37 +174,37 @@
   transform: rotate(135deg);
 }
 
-.tours__link:hover{
+.tours__link:hover {
   color: v.$additional20;
 }
 
-.tours__link:hover:after {
-  border-color: v.$additional20;;
+.tours__link:hover::after {
+  border-color: v.$additional20;
 }
 
-.tours__link:focus{
+.tours__link:focus {
   color: v.$additional;
 }
-.tours__link:focus:after {
+
+.tours__link:focus::after {
   border-color: v.$additional;
 }
 
-.tours__link:active{
+.tours__link:active {
   color: v.$blue;
 }
-.tours__link:active:after {
+
+.tours__link:active::after {
   border-color: v.$blue;
 }
 
-.tours__link--disabled{
+.tours__link--disabled {
   color: v.$disabled;
   cursor: default;
   pointer-events: none;
 }
+
 .tours__link--disabled::after {
   border-color: v.$disabled;
 }
-
-
-
 
