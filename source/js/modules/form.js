@@ -24,15 +24,3 @@ inputs.forEach((input) =>{
     input.classList.remove('form__input--invalid');
   });
 });
-
-// nameInput.addEventListener('invalid', (e) =>{
-//   e.preventDefault();
-//   nameInput.classList.add('form__input--error');
-//   nameError.textContent = 'Имя может содержать только буквы и пробелы';
-// });
-
-// telInput.addEventListener('invalid', (e) =>{
-//   e.preventDefault();
-//   telInput.classList.add('form__input--error');
-//   telError.textContent = 'Введите полный номер телефона';
-// });

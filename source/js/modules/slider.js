@@ -27,9 +27,9 @@ new Swiper('.hero__swiper', {
       });
     },
   },
-  // breakpoints: {
-  //   1440: {
-  //     allowTouchMove: false,
-  //   }
-  // }
+  breakpoints: {
+    1440: {
+      allowTouchMove: false,
+    }
+  }
 });

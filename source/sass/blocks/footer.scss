@@ -3,7 +3,6 @@
 
 .footer {
   @include m.container;
-
   padding-top: 22px;
 
   @include m.tablet {
@@ -119,7 +118,7 @@
     color: v.$blue;
   }
 
-  &--disabler {
+  &--disabled {
     color: v.$disabled;
   }
 }

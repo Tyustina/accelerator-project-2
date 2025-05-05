@@ -6,8 +6,6 @@
   flex-direction: column;
   gap: 19px;
   width: 290px;
-
-  // min-height: 501px;
   padding: 20px;
   box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
   background-color: v.$white;
@@ -34,8 +32,6 @@
 
   @include m.tablet {
     width: 186px;
-
-    // height: 100%;
     height: 237px;
   }
 

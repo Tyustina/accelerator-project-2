@@ -155,12 +155,12 @@
 }
 
 .form__input--invalid {
-  border-color: v.$error; /* Или цвет из вашего стайлгайда */
+  border-color: v.$error;
   box-shadow: none;
 }
 
 .form__input--invalid + .form__label::after {
-  content: " - Ошибка!"; /* Добавляем текст ошибки к label */
+  content: "Введите корректные данные!";
   color: v.$error;
 }
 
